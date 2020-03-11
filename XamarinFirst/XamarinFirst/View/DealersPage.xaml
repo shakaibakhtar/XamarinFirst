@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFirst.View.DealersPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0">
+            <ListView ItemsSource="{Binding Dealers}"
+                      HasUnevenRows="True"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+                                <StackLayout Padding="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout>
+                                            <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0" IsClippedToBounds="True">
+                                                <Image Source="Logo.png" HeightRequest="40" WidthRequest="40"></Image>
+                                            </Frame>
+                                        </StackLayout>
+                                        <StackLayout Padding="10, 0, 0, 0" 
+                                                     Orientation="Vertical">
+                                            <Label Text="{Binding Name}" VerticalOptions="Start"
+                                               FontAttributes="Bold"
+                                               FontSize="Small"
+                                               FontFamily="{StaticResource ThemeFont}"></Label>
+                                            <Label Text="{Binding Designation}"
+                                               FontSize="Micro"
+                                               FontFamily="{StaticResource ThemeFont}"></Label>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical"
+                                                     HorizontalOptions="EndAndExpand">
+                                            <Label Text="{Binding Availability}"
+                                               FontAttributes="Bold"
+                                               FontSize="Small"
+                                               FontFamily="{StaticResource ThemeFont}"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

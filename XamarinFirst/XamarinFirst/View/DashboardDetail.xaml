@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFirst.View.DashboardDetail"
+             Title="Dashboard">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <!--<Label Text="Dashboard"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   Padding="0 0 20 0"></Label>-->
+            <Label Text="Line Chart Sales"
+                   FontSize="Large"
+                   BackgroundColor="Red"
+                   VerticalOptions="Center"
+                   Padding="0,70"
+                   FontFamily="{StaticResource ThemeFont}"
+                   HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Padding="10"
+                       BackgroundColor="#286090"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontFamily="{StaticResource ThemeFont}"
+                       Text="Total Sold Properties: 230"/>
+
+                <Label Padding="10"
+                       BackgroundColor="#286090"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontFamily="{StaticResource ThemeFont}"
+                       Text="Total Available Properites: 50"/>
+
+                <Label Padding="10"
+                       BackgroundColor="#286090"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.Column="2"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontFamily="{StaticResource ThemeFont}"
+                       Text="Total Sales: ‭1,150,000,000‬"/>
+                <Label Padding="10"
+                       BackgroundColor="#286090"
+                       TextColor="White"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontFamily="{StaticResource ThemeFont}"
+                       Text="This Week Sale: 10,00,000"/>
+
+                <Label Padding="10"
+                       BackgroundColor="#286090"
+                       TextColor="White"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontFamily="{StaticResource ThemeFont}"
+                       Text="This Month Sale: 50,00,000"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnTransactions"
+                        Clicked="btnTransactions_Clicked"
+                        Text="Transaction"
+                        BackgroundColor="Green"
+                        TextColor="White"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontFamily="{StaticResource ThemeFont}"></Button>
+                <Button x:Name="btnPartners"
+                        Clicked="btnPartners_Clicked"
+                        Text="Partners"
+                        BackgroundColor="Blue"
+                        TextColor="White"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FontFamily="{StaticResource ThemeFont}"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

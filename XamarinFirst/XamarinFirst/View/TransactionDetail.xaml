@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Transaction Detail"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFirst.View.TransactionDetail">
+    <ContentPage.Content>
+        <Grid Padding="20, 10" BackgroundColor="#EFEFF4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Title"/>
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Sold Property"/>
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Amount"/>
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="501"/>
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Made By User"/>
+            <Label Grid.Row="2"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Ali"/>
+            <Label Grid.Row="3"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Transaction Type"/>
+            <Label Grid.Row="3"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Debit"/>
+            <Label Grid.Row="4"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="DateTime"/>
+            <Label Grid.Row="4"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="01/02/2020 02:06pm"/>
+            <Label Grid.Row="5"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Note"/>
+            <Label Grid.Row="5"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Property Sold by Ali"/>
+            <Label Grid.Row="6"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Account Debited"/>
+            <Label Grid.Row="6"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Ali"/>
+            <Label Grid.Row="7"
+                   Grid.Column="0"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Account Credit"/>
+            <Label Grid.Row="7"
+                   Grid.Column="1"
+                   FontFamily="{StaticResource ThemeFont}"
+                   Text="Ali"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

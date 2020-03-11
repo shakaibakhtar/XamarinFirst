@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFirst.LoginPage"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout Padding="20">
+        <Image  Source="Logo.png" WidthRequest="100" />
+        <Label FontFamily="{StaticResource ThemeFont}" Text="Mehdi Marketing Service" FontSize="Micro" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#286090"></Label>
+        <Entry FontFamily="{StaticResource ThemeFont}" Placeholder="UserName"></Entry>
+        <Entry FontFamily="{StaticResource ThemeFont}" Placeholder="Password" IsPassword="True"></Entry>
+        <Label FontFamily="{StaticResource ThemeFont}" Text="Forgot Password?" TextColor="DarkBlue" HorizontalOptions="End" VerticalOptions="End" >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer  
+                    Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Label.GestureRecognizers>
+        </Label>
+        <Button FontFamily="{StaticResource ThemeFont}" Text="Log In" x:Name="bilal" Clicked="bilal_Clicked" TextColor="White" BackgroundColor="#286090"></Button>
+        <Label FontFamily="{StaticResource ThemeFont}" Text="OR" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+        <Label FontFamily="{StaticResource ThemeFont}" Text="Log in with Facebook" TextColor="#286090" HorizontalTextAlignment="Center" WidthRequest="150">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+            </Label.GestureRecognizers>
+        </Label>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="0,30,0,0">
+            <Label FontFamily="{StaticResource ThemeFont}" Text="Don't have an account?" HorizontalTextAlignment="Center" HorizontalOptions="Center"></Label>
+            <Button FontFamily="{StaticResource ThemeFont}" Text="Sign up" HorizontalOptions="Center" VerticalOptions="End" x:Name="signup" Clicked="signup_Clicked" TextColor="#286090"></Button>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
