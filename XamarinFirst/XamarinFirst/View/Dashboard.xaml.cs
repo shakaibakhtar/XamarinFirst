@@ -40,6 +40,10 @@ namespace XamarinFirst.View
             }
             else if (item.Id == 3)
             {
+                Detail.Navigation.PushAsync(new TransactionsPage());
+            }
+            else if (item.Id == 4)
+            {
                 Detail.Navigation.PushAsync(new SettingsPage());
             }
 
