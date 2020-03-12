@@ -68,6 +68,7 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\montserrat.ttf" />
+    <BundleResource Include="Resources\montserratBold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json">

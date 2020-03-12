@@ -22,7 +22,7 @@ namespace XamarinFirst.View
         public async Task<int> LongRunningOperationAsync() // assume we return an int from this long running operation 
         {
             await Task.Delay(2000); // 1 second delay
-            await Navigation.PushModalAsync(new LoginPage());
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
 
             return 1;
         }

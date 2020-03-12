@@ -24,20 +24,8 @@ namespace XamarinFirst
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ForgotPassword());
+            //Application.Current.MainPage = new NavigationPage(new ForgotPassword());
             //DisplayAlert("Oh No!", "You Forgot Your Password!", "Recover It!");
-        }
-
-        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
-        {
-            DisplayAlert("Notification", "Do You Want To Login With FACEBOOK!", "Login!");
-        }
-
-        private void bilal_Clicked(object sender, EventArgs e)
-        {
-            //if success
-            Application.Current.MainPage = new NavigationPage(new Dashboard());
-            //else
-            //Navigation.PopAsync();
         }
 
         private void signup_Clicked(object sender, EventArgs e)
@@ -54,6 +42,14 @@ namespace XamarinFirst
             //}
             //return !_canClose;
             return false;
+        }
+
+        private void btnLogin_Clicked(object sender, EventArgs e)
+        {
+            //if success
+            Application.Current.MainPage = new NavigationPage(new Dashboard());
+            //else
+            //Navigation.PopAsync();
         }
 
         //private async void ShowExitDialog()
