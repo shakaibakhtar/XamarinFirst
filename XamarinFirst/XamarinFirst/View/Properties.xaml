@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage Title="Properties"
+<ContentPage Title="Map"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -17,24 +17,20 @@
                             <ContentView>
                                 <StackLayout Padding="10">
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout>
-                                            <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0">
-                                                <Label FontFamily="{StaticResource ThemeFont}" x:Name="Etichetta" Text="P" FontSize="20" Grid.Column="1" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                        <StackLayout HorizontalOptions="Start">
+                                            <Frame CornerRadius="10" HeightRequest="40" WidthRequest="50" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="10, 0">
+                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="PlotNo" Text="{Binding PlotNo}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" BackgroundColor="{StaticResource ThemeTextColor}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                             </Frame>
                                         </StackLayout>
-                                        <StackLayout Padding="10, 0, 0, 0" 
-                                                     Orientation="Vertical">
-                                            <Label FontFamily="{StaticResource ThemeFont}" Text="{Binding PlotType}" VerticalOptions="Start"
-                                               FontAttributes="Bold"
-                                               FontSize="Small"></Label>
-                                            <Label FontFamily="{StaticResource ThemeFont}" Text="{Binding PlotNo}"
-                                               FontSize="Micro"></Label>
+                                        <StackLayout HorizontalOptions="CenterAndExpand">
+                                            <Frame CornerRadius="10" HeightRequest="40" WidthRequest="50" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="10, 0">
+                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="PlotSize" Text="{Binding PlotSize}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" BackgroundColor="{StaticResource ThemeTextColor}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                            </Frame>
                                         </StackLayout>
-                                        <StackLayout Orientation="Vertical"
-                                                     HorizontalOptions="EndAndExpand">
-                                            <Label FontFamily="{StaticResource ThemeFont}" Text="{Binding Availability}"
-                                               FontAttributes="Bold"
-                                               FontSize="Small"></Label>
+                                        <StackLayout HorizontalOptions="End">
+                                            <Frame CornerRadius="10" HeightRequest="40" WidthRequest="70" BackgroundColor="{Binding PlotStatusColor}" HorizontalOptions="Start" VerticalOptions="Start" Padding="20, 0">
+                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="PlotStatus" Text="{Binding PlotStatus}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeTextColor}" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                            </Frame>
                                         </StackLayout>
                                     </StackLayout>
                                 </StackLayout>

@@ -7,17 +7,18 @@ namespace XamarinFirst.Model
     class PropertyModel
     {
         public string PlotNo { get; set; }
-        public string PlotType { get; set; }
-        public string Availability { get; set; }
+        public string PlotSize { get; set; }
+        public string PlotStatus { get; set; }
+        public string PlotStatusColor { get; set; }
 
         public PropertyModel()
         {}
 
-        public PropertyModel(string PlotNo, string PlotType, string Availability)
+        public PropertyModel(string PlotNo, string PlotSize, string PlotStatus)
         {
             this.PlotNo = PlotNo;
-            this.PlotType = PlotType;
-            this.Availability = Availability;
+            this.PlotSize = PlotSize;
+            this.PlotStatus = PlotStatus;
         }
 
         //public int SalePrice { get; set; }
