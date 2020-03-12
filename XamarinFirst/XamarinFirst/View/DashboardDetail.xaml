@@ -3,19 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
              x:Class="XamarinFirst.View.DashboardDetail"
              Title="Dashboard">
     <ContentPage.Content>
         <StackLayout Padding="10">
-            
-            <Label Text="Line Chart Sales"
+
+            <forms:ChartView x:Name="SalesChart" HeightRequest="150">
+                
+            </forms:ChartView>
+            <!--<Label Text="Line Chart Sales"
                    FontSize="Large"
                    BackgroundColor="Red"
                    VerticalOptions="Center"
                    Padding="0,70"
                    FontFamily="{StaticResource ThemeFont}"
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"/>-->
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
@@ -24,57 +28,83 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Padding="10"
-                       BackgroundColor="#286090"
-                       TextColor="White"
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       VerticalTextAlignment="Center"
-                       FontAttributes="Bold"
-                       FontFamily="{StaticResource ThemeFont}"
-                       Text="Total Sold Properties: 230"/>
 
-                <Label Padding="10"
-                       BackgroundColor="#286090"
-                       TextColor="White"
-                       Grid.Row="0"
-                       Grid.Column="1"
-                       VerticalTextAlignment="Center"
-                       FontAttributes="Bold"
-                       FontFamily="{StaticResource ThemeFont}"
-                       Text="Total Available Properites: 50"/>
+                <StackLayout Grid.Row="0"
+                             Grid.Column="0"
+                             BackgroundColor="{StaticResource ThemeBGColor}"
+                             Padding="10">
+                    <Label TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="Start"
+                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="Total Sold Properties:"/>
+                    <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                           TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="EndAndExpand"
+                           FontFamily="{StaticResource ThemeFont}"
+                           FontSize="Small"
+                           HorizontalTextAlignment="Center"
+                           Text="230"/>
+                </StackLayout>
 
-                <Label Padding="10"
-                       BackgroundColor="#286090"
-                       TextColor="White"
-                       Grid.Row="0"
-                       Grid.Column="2"
-                       VerticalTextAlignment="Center"
-                       FontAttributes="Bold"
-                       FontFamily="{StaticResource ThemeFont}"
-                       Text="Total Sales: ‭1,150,000,000‬"/>
-                <Label Padding="10"
-                       BackgroundColor="#286090"
-                       TextColor="White"
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       VerticalTextAlignment="Center"
-                       FontAttributes="Bold"
-                       FontFamily="{StaticResource ThemeFont}"
-                       Text="This Week Sale: 10,00,000"/>
+                <StackLayout Grid.Row="0"
+                             Grid.Column="1"
+                             BackgroundColor="{StaticResource ThemeBGColor}"
+                             Padding="10">
+                    <Label TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="Start"
+                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="Total Available Properties:"/>
+                    <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                           TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="EndAndExpand"
+                           FontFamily="{StaticResource ThemeFont}"
+                           FontSize="Small"
+                           HorizontalTextAlignment="Center"
+                           Text="70"/>
+                </StackLayout>
 
-                <Label Padding="10"
-                       BackgroundColor="#286090"
-                       TextColor="White"
-                       Grid.Row="1"
-                       Grid.Column="1"
-                       VerticalTextAlignment="Center"
-                       FontAttributes="Bold"
-                       FontFamily="{StaticResource ThemeFont}"
-                       Text="This Month Sale: 50,00,000"/>
+                <StackLayout Grid.Row="1"
+                             Grid.Column="0"
+                             BackgroundColor="{StaticResource ThemeBGColor}"
+                             Padding="10">
+                    <Label TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="Start"
+                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="Total Sales:"/>
+                    <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                           TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="EndAndExpand"
+                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="1,150,000,000"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1"
+                             Grid.Column="1"
+                             BackgroundColor="{StaticResource ThemeBGColor}"
+                             Padding="10">
+                    <Label TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="Start"
+                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="Total Sales:"/>
+                    <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                           TextColor="{StaticResource ThemeTextColor}"
+                           VerticalOptions="EndAndExpand"
+                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="1,150,000,000"/>
+                </StackLayout>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
