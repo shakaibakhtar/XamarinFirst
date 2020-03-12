@@ -8,174 +8,211 @@
              x:Class="XamarinFirst.View.DashboardDetail"
              Title="Dashboard">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <ScrollView>
+            <StackLayout Padding="10">
 
-            <forms:ChartView x:Name="SalesChart" HeightRequest="150">
+                <forms:ChartView x:Name="SalesChart" HeightRequest="150">
                 
-            </forms:ChartView>
-            <!--<Label Text="Line Chart Sales"
-                   FontSize="Large"
-                   BackgroundColor="Red"
-                   VerticalOptions="Center"
-                   Padding="0,70"
-                   FontFamily="{StaticResource ThemeFont}"
-                   HorizontalTextAlignment="Center"/>-->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                </forms:ChartView>
+                <!--<Label Text="Line Chart Sales"
+                       FontSize="Large"
+                       BackgroundColor="Red"
+                       VerticalOptions="Center"
+                       Padding="0,70"
+                       FontFamily="{StaticResource ThemeFont}"
+                       HorizontalTextAlignment="Center"/>-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Frame CornerRadius="10" 
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       HorizontalOptions="FillAndExpand"
-                       BackgroundColor="{StaticResource ThemeBGColor}"
-                       Padding="0"
-                       IsClippedToBounds="True">
+                    <Frame CornerRadius="10" 
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource ThemeBGColor}"
+                           Padding="0"
+                           IsClippedToBounds="True">
 
-                    <StackLayout Padding="10, 20">
-                        <Label TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="Sold Properties:"/>
-                        <Label BackgroundColor="{StaticResource ThemeBGColor}"
-                           TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="230"/>
-                    </StackLayout>
+                        <StackLayout Padding="10">
+                            <Label TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Start"
+                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="Sold Properties:"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Center"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="200"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="End"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Micro"
+                               HorizontalTextAlignment="Center"
+                               Text="2 Hundred"/>
+                        </StackLayout>
 
-                </Frame>
+                    </Frame>
 
 
-                <Frame CornerRadius="10" 
-                       Grid.Row="0"
-                       Grid.Column="1"
-                       HorizontalOptions="FillAndExpand"
-                       BackgroundColor="{StaticResource ThemeBGColor}"
-                       Padding="0"
-                       IsClippedToBounds="True">
-                    <StackLayout Padding="10, 20">
-                        <Label TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="Available Properties:"/>
-                        <Label BackgroundColor="{StaticResource ThemeBGColor}"
-                           TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="70"/>
-                    </StackLayout>
-                </Frame>
+                    <Frame CornerRadius="10" 
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource ThemeBGColor}"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <StackLayout Padding="10">
+                            <Label TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Start"
+                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="Available Properties:"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Center"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="200"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="End"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Micro"
+                               HorizontalTextAlignment="Center"
+                               Text="2 Hundred"/>
+                        </StackLayout>
+                    </Frame>
 
-                <Frame CornerRadius="10" 
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       HorizontalOptions="FillAndExpand"
-                       BackgroundColor="{StaticResource ThemeBGColor}"
-                       Padding="0"
-                       IsClippedToBounds="True">
-                    <StackLayout Padding="10, 20">
-                        <Label TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="Total Sale Price:"/>
-                        <Label BackgroundColor="{StaticResource ThemeBGColor}"
-                           TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="1,150,000,000"/>
-                    </StackLayout>
-                </Frame>
+                    <Frame CornerRadius="10" 
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource ThemeBGColor}"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <StackLayout Padding="10">
+                            <Label TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Start"
+                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="This Week Sales:"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Center"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="55,30,000"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="End"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Micro"
+                               HorizontalTextAlignment="Center"
+                               Text="55 Lakhs, 30 Thousands"/>
+                        </StackLayout>
+                    </Frame>
 
-                <Frame CornerRadius="10" 
-                       Grid.Row="1"
-                       Grid.Column="1"
-                       HorizontalOptions="FillAndExpand"
-                       BackgroundColor="{StaticResource ThemeBGColor}"
-                       Padding="0"
-                       IsClippedToBounds="True">
-                    <StackLayout Padding="10, 20">
-                        <Label TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="This Week Price:"/>
-                        <Label BackgroundColor="{StaticResource ThemeBGColor}"
-                           TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="1,150,000,000"/>
-                    </StackLayout>
-                </Frame>
+                    <Frame CornerRadius="10" 
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource ThemeBGColor}"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <StackLayout Padding="10">
+                            <Label TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Start"
+                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="This Week Sales:"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Center"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="4,55,30,000"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="End"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Micro"
+                               HorizontalTextAlignment="Center"
+                               Text="4 Crore, 55 Lakhs, 30 Thousands"/>
+                        </StackLayout>
+                    </Frame>
 
-                <Frame CornerRadius="10" 
-                       Grid.Row="2"
-                       Grid.ColumnSpan="2"
-                       HorizontalOptions="FillAndExpand"
-                       BackgroundColor="{StaticResource ThemeBGColor}"
-                       Padding="0"
-                       IsClippedToBounds="True">
-                    <StackLayout Padding="10">
-                        <Label TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="This Month Price:"/>
-                        <Label BackgroundColor="{StaticResource ThemeBGColor}"
-                           TextColor="{StaticResource ThemeTextColor}"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="{StaticResource ThemeFontBold}"
-                           FontSize="Small"
-                           HorizontalTextAlignment="Center"
-                           Text="1,150,000,000"/>
-                    </StackLayout>
-                </Frame>
-            </Grid>
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button x:Name="btnTransactions"
-                        Clicked="btnTransactions_Clicked"
-                        Text="Transaction"
-                        BackgroundColor="Green"
-                        TextColor="White"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        FontFamily="{StaticResource ThemeFont}"></Button>
-                <Button x:Name="btnPartners"
-                        Clicked="btnPartners_Clicked"
-                        Text="Partners"
-                        BackgroundColor="Blue"
-                        TextColor="White"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        FontFamily="{StaticResource ThemeFont}"></Button>
-            </Grid>-->
-        </StackLayout>
+                    <Frame CornerRadius="10" 
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="{StaticResource ThemeBGColor}"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <StackLayout Padding="10">
+                            <Label TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Start"
+                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="Total Sales:"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="Center"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               Text="10,10,55,30,000"/>
+                            <Label BackgroundColor="{StaticResource ThemeBGColor}"
+                               TextColor="{StaticResource ThemeTextColor}"
+                               VerticalOptions="End"
+                               FontFamily="{StaticResource ThemeFont}"
+                               FontSize="Micro"
+                               HorizontalTextAlignment="Center"
+                               Text="10 Arab, 10 Crore, 55 Lakhs, 30 Thousands"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <!--<Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnTransactions"
+                            Clicked="btnTransactions_Clicked"
+                            Text="Transaction"
+                            BackgroundColor="Green"
+                            TextColor="White"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            FontFamily="{StaticResource ThemeFont}"></Button>
+                    <Button x:Name="btnPartners"
+                            Clicked="btnPartners_Clicked"
+                            Text="Partners"
+                            BackgroundColor="Blue"
+                            TextColor="White"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontFamily="{StaticResource ThemeFont}"></Button>
+                </Grid>-->
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
