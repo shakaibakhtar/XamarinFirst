@@ -33,10 +33,11 @@ namespace XamarinFirst.View
             {
                 MenuItems = new ObservableCollection<DashboardMasterMenuItem>(new[]
                 {
-                    new DashboardMasterMenuItem { Id = 0, Title = "Properties List" },
-                    new DashboardMasterMenuItem { Id = 1, Title = "Partners List" },
-                    new DashboardMasterMenuItem { Id = 2, Title = "Dealers List" },
-                    new DashboardMasterMenuItem { Id = 3, Title = "Settings" },
+                    new DashboardMasterMenuItem { Id = 0, Title = "Properties" },
+                    new DashboardMasterMenuItem { Id = 1, Title = "Partners" },
+                    new DashboardMasterMenuItem { Id = 2, Title = "Dealers" },
+                    new DashboardMasterMenuItem { Id = 3, Title = "Transactions" },
+                    new DashboardMasterMenuItem { Id = 4, Title = "Settings" },
                 });
             }
 

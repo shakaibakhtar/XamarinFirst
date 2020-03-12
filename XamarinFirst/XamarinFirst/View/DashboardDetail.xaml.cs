@@ -70,15 +70,15 @@ namespace XamarinFirst.View
             this.SalesChart.Chart = chart;
         }
 
-        private void btnTransactions_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new TransactionsPage());
-        }
+        //private void btnTransactions_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PushAsync(new TransactionsPage());
+        //}
 
-        private void btnPartners_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new PartnersPage());
-        }
+        //private void btnPartners_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PushAsync(new PartnersPage());
+        //}
 
         private static string GetHexString(Xamarin.Forms.Color color)
         {

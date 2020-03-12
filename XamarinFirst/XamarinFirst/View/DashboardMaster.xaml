@@ -12,9 +12,9 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
 
-            <d:ListView.ItemsSource >
+            <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>User Profile</x:String>
+                    <x:String>Page 1</x:String>
                     <x:String>Page 2</x:String>
                     <x:String>Page 3</x:String>
                     <x:String>Page 4</x:String>
@@ -22,7 +22,7 @@
                 </x:Array>
             </d:ListView.ItemsSource>
             <ListView.Header>
-                <StackLayout Orientation="Vertical" BackgroundColor="#03A9F4">
+                <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource ThemeBGColor}">
                     <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="10" IsClippedToBounds="True">
                         <Image Source="Logo.png" HeightRequest="40" WidthRequest="40">
                             <Image.GestureRecognizers>
@@ -33,7 +33,8 @@
                     <Label Margin="0, 0, 0, 30" 
                            HorizontalOptions="Center"
                            Text="Nadeem Ahmad"
-                           FontFamily="{StaticResource ThemeFont}"
+                           TextColor="{StaticResource ThemeTextColor}"
+                           FontFamily="{StaticResource ThemeFontBold}"
                            Style="{DynamicResource SubtitleStyle}"/>
                 </StackLayout>
             </ListView.Header>
@@ -44,8 +45,8 @@
                             <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontFamily="{StaticResource ThemeFont}"
-                    FontSize="24"/>
+                    FontFamily="{StaticResource ThemeFontBold}"
+                    FontSize="Small"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
