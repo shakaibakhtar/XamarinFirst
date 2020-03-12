@@ -8,11 +8,17 @@
              x:Class="XamarinFirst.View.Verification">
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Label FontFamily="{StaticResource ThemeFontBold}" VerticalOptions="Start" HorizontalOptions="Center" Text="Please enter your 4 digit pin"></Label>
-            <StackLayout VerticalOptions="CenterAndExpand">
-                <Entry FontFamily="{StaticResource ThemeFont}" Margin="0, 20" Keyboard="Numeric" Placeholder="Verification Code" x:Name="entryVerificationCode"></Entry>
-                <Button FontFamily="{StaticResource ThemeFontBold}" Margin="0, 20" Text="Verify" HorizontalOptions="Center" x:Name="ok" Clicked="ok_Clicked" BackgroundColor="{StaticResource ThemeBGColor}" TextColor="{DynamicResource ThemeTextColor}"></Button>
-            </StackLayout>
+            <Frame CornerRadius="100" 
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Padding="10, 10, 10, 10"
+                   IsClippedToBounds="True">
+                <Image Source="verificationIcon.png" HorizontalOptions="Center" WidthRequest="80" HeightRequest="80"></Image>
+            </Frame>
+            <Entry FontFamily="{StaticResource ThemeFont}" VerticalOptions="Center" Keyboard="Email" Margin="0, 20" x:Name="entryVerificationCode" Placeholder="Verification Code"></Entry>
+            <Button FontFamily="{StaticResource ThemeFontBold}" BackgroundColor="{DynamicResource ThemeBGColor}" TextColor="{DynamicResource ThemeTextColor}" Text="Verify" HorizontalOptions="Center" x:Name="ok" Clicked="ok_Clicked" Margin="0, 20"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
