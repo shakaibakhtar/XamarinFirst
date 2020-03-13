@@ -15,8 +15,8 @@ namespace XamarinFirst.ViewModel
         string[] AccNumbers = { "1862-212874152", "0230-697833147" };
         string[] Amounts = { "8000000", "5000000" };
         string[] Icons = { "creditIcon.png", "debitIcon.png" };
-        string[] Colors = { "#00B80C", "#D40505" };
-        string[] TransactionType = { "Credited", "Debited" };
+        string[] Colors = { "#00B41E", "#D40404" };
+        string[] TransactionType = { "C", "D" };
 
         public TransactionViewModel()
         {

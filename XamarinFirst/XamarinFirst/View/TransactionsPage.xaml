@@ -15,52 +15,49 @@
                     <DataTemplate>
                         <ViewCell>
                             <ContentView>
-                                <StackLayout Padding="0">
+                                <StackLayout Padding="0, 5" HorizontalOptions="CenterAndExpand">
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout HorizontalOptions="Start" BackgroundColor="{Binding Color}" Orientation="Vertical" WidthRequest="60">
-                                            <!--<Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0">
-                                                <Label FontFamily="{StaticResource ThemeFont}" x:Name="Etichetta" Text="T" FontSize="20" Grid.Column="1" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                                            </Frame>-->
-                                            <Image Source="{Binding Icon}" WidthRequest="40" HeightRequest="40"></Image>
-                                            <Label Text="{Binding TransactionType}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="Micro" TextColor="{StaticResource ThemeTextColor}"></Label>
+                                        <StackLayout HorizontalOptions="Start" Orientation="Vertical" WidthRequest="50">
+                                            <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="{Binding Color}" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="0">
+                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="LblTransactionType" Text="{Binding TransactionType}" FontSize="20" Grid.Column="1" TextColor="White" BackgroundColor="{Binding Color}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                            </Frame>
+                                            <!--<Image Source="{Binding Icon}" WidthRequest="40" HeightRequest="40"></Image>
+                                            <Label Text="{Binding TransactionType}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="Micro" TextColor="{StaticResource ThemeTextColor}"></Label>-->
                                         </StackLayout>
-                                        <StackLayout Padding="0, 10, 0, 0"
+                                        <StackLayout VerticalOptions="CenterAndExpand"
                                                      Orientation="Vertical"
                                                      HorizontalOptions="FillAndExpand">
-                                            <Label Text="{Binding BankName}"
-                                               FontSize="Medium"
-                                               HorizontalOptions="CenterAndExpand"
+                                            <Label Text="{Binding Amount, StringFormat='Pkr: {0:F0}'}"
+                                               FontSize="Small"
+                                               HorizontalOptions="Start"
                                                FontFamily="{StaticResource ThemeFontBold}"
                                                TextColor="{StaticResource ThemeBGColor}"></Label>
                                             <StackLayout Orientation="Horizontal">
-                                                <Label Text="{Binding Date}"
-                                                       FontSize="Micro"
+                                                <Label Text="{Binding BankName}"
+                                                       FontSize="Small"
                                                        FontFamily="{StaticResource ThemeFont}"
                                                        HorizontalOptions="StartAndExpand"
                                                        TextColor="{StaticResource ThemeBGColor}"></Label>
-                                                <Label Text="{Binding AccountNo}"
+                                                <!--<Label Text="{Binding AccountNo}"
                                                        FontSize="Micro"
                                                        FontFamily="{StaticResource ThemeFont}"
                                                        HorizontalOptions="EndAndExpand"
-                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>-->
                                             </StackLayout>
                                         </StackLayout>
                                         <StackLayout Orientation="Vertical"
                                                      HorizontalOptions="End"
-                                                     BackgroundColor="{Binding Color}"
-                                                     WidthRequest="60"
-                                                     Padding="0, 10, 0, 0">
-                                            <Label Text="{Binding Amount}"
-                                               FontAttributes="Bold"
-                                               FontSize="Micro"
-                                               FontFamily="{StaticResource ThemeFontBold}"
+                                                     VerticalOptions="CenterAndExpand">
+                                            <Label Text="{Binding Date}"
+                                               FontSize="Small"
+                                               FontFamily="{StaticResource ThemeFont}"
                                                    HorizontalOptions="CenterAndExpand"
-                                                   TextColor="{StaticResource ThemeTextColor}"></Label>
-                                            <Label Text="PKR"
-                                               FontSize="Micro"
-                                               FontFamily="{StaticResource ThemeFontBold}"
+                                                   TextColor="{StaticResource ThemeBGColor}"></Label>
+                                            <Label Text="{Binding AccountNo}"
+                                               FontSize="Small"
+                                               FontFamily="{StaticResource ThemeFont}"
                                                    HorizontalOptions="CenterAndExpand"
-                                                   TextColor="{StaticResource ThemeTextColor}"></Label>
+                                                   TextColor="{StaticResource ThemeBGColor}"></Label>
                                         </StackLayout>
                                     </StackLayout>
                                 </StackLayout>
