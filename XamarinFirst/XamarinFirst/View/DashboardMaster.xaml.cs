@@ -55,6 +55,7 @@ namespace XamarinFirst.View
 
         private void ProfilePicture_Tapped(object sender, EventArgs e)
         {
+            Navigation.PopToRootAsync();
             Navigation.PushAsync(new UserProfile());
         }
     }

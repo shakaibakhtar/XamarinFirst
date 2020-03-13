@@ -23,12 +23,14 @@
             </d:ListView.ItemsSource>
             <ListView.Header>
                 <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource ThemeBGColor}">
-                    <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="10" IsClippedToBounds="True">
-                        <Image Source="Logo.png" HeightRequest="40" WidthRequest="40">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="ProfilePicture_Tapped"></TapGestureRecognizer>
-                            </Image.GestureRecognizers>
-                        </Image>
+                    <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="2" IsClippedToBounds="True">
+                        <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0" Padding="0" IsClippedToBounds="True">
+                            <Image Source="dp.jpg" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ProfilePicture_Tapped"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
                     </Frame>
                     <Label Margin="0, 0, 0, 30" 
                            HorizontalOptions="Center"

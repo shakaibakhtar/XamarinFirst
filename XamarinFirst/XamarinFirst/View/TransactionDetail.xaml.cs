@@ -16,5 +16,10 @@ namespace XamarinFirst.View
         {
             InitializeComponent();
         }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Notification", "Screenshot Captured", "OK");
+        }
     }
 }

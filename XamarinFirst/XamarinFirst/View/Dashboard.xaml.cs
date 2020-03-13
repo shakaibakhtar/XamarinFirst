@@ -59,9 +59,14 @@ namespace XamarinFirst.View
             //MasterPage.ListView.SelectedItem = null;
         }
 
+        
+
         protected override bool OnBackButtonPressed()
         {
-            Application.Current.MainPage = new NavigationPage(new LoginPage());
+            if (IsPresented)
+                IsPresented = !IsPresented;
+            else
+                Application.Current.MainPage = new NavigationPage(new LoginPage());
             return true;
         }
     }
