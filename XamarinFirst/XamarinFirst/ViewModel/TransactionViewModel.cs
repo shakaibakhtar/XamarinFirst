@@ -10,16 +10,26 @@ namespace XamarinFirst.ViewModel
     {
         public ObservableCollection<TransactionModel> Transactions { get; set; } = new ObservableCollection<TransactionModel>();
 
+        string[] BankNames = { "Bank Alfalah Ltd.", "Habib Bank Ltd." };
+        string[] Dates = { "04 March, 2020", "08 March, 2020" };
+        string[] AccNumbers = { "1862-212874152", "0230-697833147" };
+        string[] Amounts = { "8000000", "5000000" };
+        string[] Icons = { "creditIcon.png", "debitIcon.png" };
+        string[] Colors = { "#00B80C", "#D40505" };
+        string[] TransactionType = { "Credited", "Debited" };
+
         public TransactionViewModel()
         {
             for (int i = 0; i < 15; i++)
             {
                 TransactionModel transaction = new TransactionModel();
-                transaction.Title = "Sold Property " + i;
-                transaction.DateTime = "01/02/2020 02:0" + i + "pm";
-                transaction.TransactionBy = "Ali " + i;
-                transaction.Amount = "50" + i;
-                transaction.Color = (i == 4) ?  "red" : "blue";
+                transaction.BankName = BankNames[i % 2];
+                transaction.Date = Dates[i % 2];
+                transaction.AccountNo = AccNumbers[i % 2];
+                transaction.Amount = Amounts[i % 2];
+                transaction.Icon = Icons[i % 2];
+                transaction.Color = Colors[i % 2];
+                transaction.TransactionType = TransactionType[i % 2];
 
                 Transactions.Add(transaction);
             }
