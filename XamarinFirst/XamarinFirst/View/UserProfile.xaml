@@ -7,48 +7,50 @@
              x:Class="XamarinFirst.View.UserProfile"
              Title="Dealer Profile">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="0, 20" BackgroundColor="#E8E8EC">
-            <Frame CornerRadius="100" 
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="0, 20" BackgroundColor="White">
+                <Frame CornerRadius="100" 
                    HeightRequest="200"
                    WidthRequest="200"
                    HorizontalOptions="Center"
-                   BackgroundColor="{StaticResource ThemeTextColor}"
+                   BackgroundColor="#E8E8EC"
                    Padding="3"
                    IsClippedToBounds="True">
-                <Frame CornerRadius="100" 
+                    <Frame CornerRadius="100" 
                    HeightRequest="200"
                    WidthRequest="200"
                    HorizontalOptions="Center"
                    Padding="0"
                    IsClippedToBounds="True">
-                    <Image Source="dp.jpg" Aspect="AspectFill" HorizontalOptions="Center" WidthRequest="200" HeightRequest="200"></Image>
+                        <Image Source="dp.png" Aspect="AspectFill" HorizontalOptions="Center" WidthRequest="200" HeightRequest="200"></Image>
+                    </Frame>
                 </Frame>
-            </Frame>
-            <Grid Padding="20" Margin="0, 20" BackgroundColor="White">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="1.6*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Name:"></Label>
-                <Label Grid.Row="0"  Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="John Smith"></Label>
-                <Label Grid.Row="1" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Email:"></Label>
-                <Label Grid.Row="1" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="johnsmith@gmail.com"></Label>
-                <Label Grid.Row="2" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Phone:"></Label>
-                <Label Grid.Row="2" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="+923123456789"></Label>
-                <Label Grid.Row="3" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Designation:"></Label>
-                <Label Grid.Row="3" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="Real Estate Agent"></Label>
-                <Label Grid.Row="4" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Location:"></Label>
-                <Label Grid.Row="4" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="Islamabad"></Label>
-            </Grid>
-            
-        </StackLayout>
+                <Grid Padding="20" Margin="0, 20" BackgroundColor="#E8E8EC">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Name:"></Label>
+                    <Label Grid.Row="0"  Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="John Smith"></Label>
+                    <Label Grid.Row="1" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Email:"></Label>
+                    <Label Grid.Row="1" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="johnsmith@gmail.com"></Label>
+                    <Label Grid.Row="2" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Phone:"></Label>
+                    <Label Grid.Row="2" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="+923123456789"></Label>
+                    <Label Grid.Row="3" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Designation:"></Label>
+                    <Label Grid.Row="3" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="Real Estate Agent"></Label>
+                    <Label Grid.Row="4" Grid.Column="0" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFont}" HorizontalOptions="StartAndExpand" FontSize="Small" Text="Location:"></Label>
+                    <Label Grid.Row="4" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" FontFamily="{StaticResource ThemeFontBold}" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="Small" Text="Islamabad"></Label>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

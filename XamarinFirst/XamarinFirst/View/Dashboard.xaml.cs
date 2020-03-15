@@ -15,38 +15,12 @@ namespace XamarinFirst.View
         public Dashboard()
         {
             InitializeComponent();
+            MasterPage.ListView.ItemTapped += ListView_ItemTapped;
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var item = e.SelectedItem as DashboardMasterMenuItem;
-            if (item == null)
-                return;
-
-            Detail.Navigation.PopToRootAsync();
-
-            if(item.Id == 0)
-            {
-                Detail.Navigation.PushAsync(new Properties());
-            }
-            else if (item.Id == 1)
-            {
-                Detail.Navigation.PushAsync(new PartnersPage());
-            }
-            else if (item.Id == 2)
-            {
-                Detail.Navigation.PushAsync(new DealersPage());
-            }
-            else if (item.Id == 3)
-            {
-                Detail.Navigation.PushAsync(new TransactionsPage());
-            }
-            else if (item.Id == 4)
-            {
-                Detail.Navigation.PushAsync(new SettingsPage());
-            }
-
             ((ListView)sender).SelectedItem = null;
             IsPresented = false;
 
@@ -59,11 +33,48 @@ namespace XamarinFirst.View
             //MasterPage.ListView.SelectedItem = null;
         }
 
-        
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as DashboardMasterMenuItem;
+            if (item == null)
+                return;
+
+            await Detail.Navigation.PopToRootAsync();
+
+            if (item.Id == 0)
+            {
+                await Detail.Navigation.PushAsync(new Properties());
+            }
+            else if (item.Id == 1)
+            {
+                await Detail.Navigation.PushAsync(new PartnersPage());
+            }
+            else if (item.Id == 2)
+            {
+                await Detail.Navigation.PushAsync(new DealersPage());
+            }
+            else if (item.Id == 3)
+            {
+                await Detail.Navigation.PushAsync(new TransactionsPage());
+            }
+            else if (item.Id == 4)
+            {
+                //await Detail.Navigation.PushAsync(new AdvanceSearchPage());
+            }
+            else if (item.Id == 5)
+            {
+                await Detail.Navigation.PushAsync(new SettingsPage());
+            }
+
+
+            //IsPresented = false;
+        }
 
         protected override bool OnBackButtonPressed()
         {
-            if (IsPresented)
+            if (Detail.Navigation.NavigationStack.ToList().Count > 1)
+                Detail.Navigation.PopAsync();
+            else if (IsPresented)
                 IsPresented = !IsPresented;
             else
                 Application.Current.MainPage = new NavigationPage(new LoginPage());

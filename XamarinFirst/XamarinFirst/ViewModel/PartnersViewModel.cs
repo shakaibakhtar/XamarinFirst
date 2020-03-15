@@ -17,7 +17,7 @@ namespace XamarinFirst.ViewModel
                 PartnersModel partner = new PartnersModel();
                 partner.Image = "Logo.png";
                 partner.Name = "Nadeem Ahmad " + i;
-                partner.Designation = "Partner " + i;
+                partner.Designation = "+9231234567" + i;
 
                 Partners.Add(partner);
             }

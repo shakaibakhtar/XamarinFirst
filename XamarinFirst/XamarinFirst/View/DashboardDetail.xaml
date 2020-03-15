@@ -40,7 +40,7 @@
                            Padding="0"
                            IsClippedToBounds="True">
 
-                        <StackLayout Padding="10">
+                        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
                                FontFamily="{StaticResource ThemeFontBold}"
@@ -73,7 +73,7 @@
                            BackgroundColor="{StaticResource ThemeBGColor}"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <StackLayout Padding="10">
+                        <StackLayout Padding="10"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
                                FontFamily="{StaticResource ThemeFontBold}"
@@ -104,7 +104,7 @@
                            BackgroundColor="{StaticResource ThemeBGColor}"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <StackLayout Padding="10">
+                        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
                                FontFamily="{StaticResource ThemeFontBold}"
@@ -135,7 +135,7 @@
                            BackgroundColor="{StaticResource ThemeBGColor}"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <StackLayout Padding="10">
+                        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
                                FontFamily="{StaticResource ThemeFontBold}"
@@ -166,7 +166,7 @@
                            BackgroundColor="{StaticResource ThemeBGColor}"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <StackLayout Padding="10">
+                        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
                                FontFamily="{StaticResource ThemeFontBold}"

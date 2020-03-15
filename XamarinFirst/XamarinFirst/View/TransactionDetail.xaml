@@ -12,130 +12,121 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <ScrollView Grid.Row="0">
-        <Grid Padding="20, 10" BackgroundColor="#EFEFF4">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
+                <Grid Padding="20, 10" BackgroundColor="#EFEFF4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
 
 
-            <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="0"
                    Grid.Column="0"
                    HorizontalOptions="Fill"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}"  TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Title" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}"  TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Sold Property" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                </Frame>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}"  TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Title" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}"  TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Sold Property" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </Frame>
 
-            <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="0"
                    Grid.Column="1"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Amount" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="10000" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
-
-            <Frame CornerRadius="100"
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Amount" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="10000" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="1"
                    Grid.ColumnSpan="2"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Made By User" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Nouman" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Time, Date" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="1:45 PM, 10 Jan, 2020" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
 
-            <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="2"
                    Grid.ColumnSpan="2"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Transaction Type" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Office Expense" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Made By User" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Nouman" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
 
-            <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="#D40404"
                    Grid.Row="3"
                    Grid.ColumnSpan="2"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Account Debited" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="1862-57482453" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Transaction Type" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Office Expense" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
 
-            <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="4"
                    Grid.ColumnSpan="2"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Account Credited" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="0230-558564778" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Account Debited" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="1862-57482453" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
 
-            <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="5"
                    Grid.ColumnSpan="2"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Time, Date" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="1:45 PM, 10 Jan, 2020" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Account Credited" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="0230-558564778" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
 
-                    <Frame CornerRadius="100"
+                    <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
                    Grid.Row="6"
                    Grid.ColumnSpan="2"
                    HorizontalOptions="FillAndExpand"
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Note" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Small" Text="Paid for kitchen material" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Note" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Paid for kitchen material" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
                 </Grid>
-        </ScrollView>
+            </ScrollView>
             <Frame HorizontalOptions="End" CornerRadius="0" IsClippedToBounds="True" Padding="0" BackgroundColor="{StaticResource ThemeBGColor}" Margin="0,0,10,22" VerticalOptions="End">
                 <ImageButton Clicked="ImageButton_Clicked" Source="SSIcon.png" HeightRequest="40" WidthRequest="40" BackgroundColor="{StaticResource ThemeBGColor}"/>
             </Frame>
-            <!--<ImageButton Source="SSIcon.png" Grid.Row="0" BackgroundColor="{StaticResource ThemeBGColor}" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" Margin="0,0,10,22" VerticalOptions="End"/>-->
-
-            <!--<StackLayout Grid.Row="7" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalOptions="Center">
-            <Frame CornerRadius="100" IsClippedToBounds="True" Padding="0" BackgroundColor="{StaticResource ThemeBGColor}">
-                <ImageButton Clicked="ImageButton_Clicked" Source="SSIcon.png" HeightRequest="60" WidthRequest="60" BackgroundColor="{StaticResource ThemeBGColor}"/>
-            </Frame>
-                <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeBGColor}" FontSize="Micro" Text="ScreenShot" HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

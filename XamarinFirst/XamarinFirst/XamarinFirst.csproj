@@ -11,10 +11,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\creditIcon.png" />
+    <None Remove="Images\debitIcon.png" />
+    <None Remove="Images\dp.png" />
+    <None Remove="Images\homeIconWhite.png" />
+    <None Remove="Images\locationIconWhite.png" />
+    <None Remove="Images\Logo.png" />
+    <None Remove="Images\priceIconWhite.png" />
+    <None Remove="Images\property1.png" />
+    <None Remove="Images\property2.png" />
     <None Remove="Images\splashbg.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\creditIcon.png" />
+    <EmbeddedResource Include="Images\debitIcon.png" />
+    <EmbeddedResource Include="Images\dp.png" />
+    <EmbeddedResource Include="Images\homeIconWhite.png" />
+    <EmbeddedResource Include="Images\locationIconWhite.png" />
+    <EmbeddedResource Include="Images\Logo.png" />
+    <EmbeddedResource Include="Images\priceIconWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\property1.png" />
+    <EmbeddedResource Include="Images\property2.png" />
     <EmbeddedResource Include="Images\splashbg.png" />
   </ItemGroup>
 

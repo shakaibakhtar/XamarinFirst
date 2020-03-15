@@ -6,27 +6,26 @@
              mc:Ignorable="d"
              x:Class="XamarinFirst.LoginPage"
              NavigationPage.HasNavigationBar="false">
-
-    <StackLayout Padding="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <ScrollView>
+    <StackLayout Padding="20" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
             <Image Source="Logo.png" WidthRequest="150" Aspect="AspectFit" />
         </StackLayout>
-    
+
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <Entry FontFamily="{StaticResource ThemeFont}" Placeholder="UserName" HorizontalOptions="FillAndExpand"></Entry>
             <Entry FontFamily="{StaticResource ThemeFont}" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand"></Entry>
-            <!--<Label FontFamily="{StaticResource ThemeFont}" Text="Don't have an account?" HorizontalTextAlignment="Center" HorizontalOptions="Center"></Label>
-            <Button FontFamily="{StaticResource ThemeFont}" Text="Sign up" HorizontalOptions="Center" VerticalOptions="End" x:Name="signup" Clicked="signup_Clicked" TextColor="#286090"></Button>-->
-            <Button FontFamily="{StaticResource ThemeFontBold}" Margin="0, 50, 0, 0" Text="Log In" x:Name="btnLogin" Clicked="btnLogin_Clicked" TextColor="{DynamicResource ThemeTextColor}" BackgroundColor="{DynamicResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="End"></Button>
-        </StackLayout>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="End">
-            <Label FontFamily="{StaticResource ThemeFont}" TextDecorations="Underline" Text="Forgot Password?" TextColor="DarkBlue" HorizontalOptions="Center" VerticalOptions="Center" >
+            <Label FontFamily="{StaticResource ThemeFont}" TextDecorations="Underline" Text="Forgot Password?" TextColor="DarkBlue" HorizontalOptions="End" VerticalOptions="Center" >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer  
                         Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
             </Label>
+            <!--<Label FontFamily="{StaticResource ThemeFont}" Text="Don't have an account?" HorizontalTextAlignment="Center" HorizontalOptions="Center"></Label>
+            <Button FontFamily="{StaticResource ThemeFont}" Text="Sign up" HorizontalOptions="Center" VerticalOptions="End" x:Name="signup" Clicked="signup_Clicked" TextColor="#286090"></Button>-->
+            <Button FontFamily="{StaticResource ThemeFontBold}" Margin="0, 50, 0, 0" Text="Log In" x:Name="btnLogin" Clicked="btnLogin_Clicked" TextColor="{DynamicResource ThemeTextColor}" BackgroundColor="{DynamicResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="End"></Button>
         </StackLayout>
     </StackLayout>
+    </ScrollView>
 
 </ContentPage>
