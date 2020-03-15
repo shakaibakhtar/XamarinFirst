@@ -16,18 +16,18 @@
                         <ViewCell>
                             <ContentView>
                                 <StackLayout Padding="10">
-                                    <StackLayout Orientation="Horizontal">
+                                    <StackLayout Padding="10, 0, 0, 0" Orientation="Horizontal">
                                         <StackLayout>
                                             <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0" IsClippedToBounds="True">
-                                                <Image Source="Logo.png" HeightRequest="40" WidthRequest="40"></Image>
+                                                <Image Source="dp.png" HeightRequest="40" WidthRequest="40"></Image>
                                             </Frame>
                                         </StackLayout>
-                                        <StackLayout Padding="10, 0, 0, 0" 
+                                        <StackLayout Padding="20, 0, 0, 0" 
                                                      Orientation="Vertical">
-                                            <Label FontFamily="{StaticResource ThemeFont}" Text="{Binding Name}" VerticalOptions="Start"
+                                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" Text="{Binding Name}" VerticalOptions="Start"
                                                FontAttributes="Bold"
                                                FontSize="Small"></Label>
-                                            <Label FontFamily="{StaticResource ThemeFont}" Text="{Binding Designation}"
+                                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" Text="{Binding Designation}"
                                                FontSize="Micro"></Label>
                                         </StackLayout>
                                         <!--<StackLayout Orientation="Vertical"

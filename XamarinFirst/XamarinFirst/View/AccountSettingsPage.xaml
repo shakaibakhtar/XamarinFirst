@@ -7,9 +7,10 @@
              x:Class="XamarinFirst.View.AccountSettingsPage"
              Title="Account Settings">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <Frame CornerRadius="100" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="10" IsClippedToBounds="True">
-                <Image Source="Logo.png" HeightRequest="100" WidthRequest="100" Aspect="AspectFit">
+            <Frame CornerRadius="100" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="0" IsClippedToBounds="True">
+                <Image Source="dp.png" HeightRequest="100" WidthRequest="100" Aspect="AspectFill">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                     </Image.GestureRecognizers>
@@ -28,5 +29,6 @@
                 <Button Grid.Row="1" x:Name="btnSave" FontFamily="{StaticResource ThemeFont}" Text="Save" TextColor="White" BackgroundColor="#286090" Clicked="btnSave_Clicked"></Button>
             </Grid>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

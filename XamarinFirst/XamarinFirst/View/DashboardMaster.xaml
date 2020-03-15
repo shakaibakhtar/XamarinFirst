@@ -8,7 +8,7 @@
              Title="Master">
     <StackLayout>
         <ListView x:Name="MenuItemsListView"
-              SeparatorVisibility="None"
+              SeparatorVisibility="Default"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
 
@@ -23,12 +23,15 @@
             </d:ListView.ItemsSource>
             <ListView.Header>
                 <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource ThemeBGColor}">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ProfilePicture_Tapped"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="2" IsClippedToBounds="True">
                         <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0" Padding="0" IsClippedToBounds="True">
-                            <Image Source="dp.jpg" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
-                                <Image.GestureRecognizers>
+                            <Image Source="dp.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
+                                <!--<Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="ProfilePicture_Tapped"></TapGestureRecognizer>
-                                </Image.GestureRecognizers>
+                                </Image.GestureRecognizers>-->
                             </Image>
                         </Frame>
                     </Frame>
@@ -43,7 +46,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                        <StackLayout Padding="15, 20" HorizontalOptions="FillAndExpand">
                             <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 

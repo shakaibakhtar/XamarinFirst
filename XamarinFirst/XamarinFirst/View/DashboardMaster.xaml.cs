@@ -37,7 +37,8 @@ namespace XamarinFirst.View
                     new DashboardMasterMenuItem { Id = 1, Title = "Partners" },
                     new DashboardMasterMenuItem { Id = 2, Title = "Dealers" },
                     new DashboardMasterMenuItem { Id = 3, Title = "Transactions" },
-                    new DashboardMasterMenuItem { Id = 4, Title = "Settings" },
+                    new DashboardMasterMenuItem { Id = 4, Title = "Advance Search" },
+                    new DashboardMasterMenuItem { Id = 5, Title = "Settings" },
                 });
             }
 

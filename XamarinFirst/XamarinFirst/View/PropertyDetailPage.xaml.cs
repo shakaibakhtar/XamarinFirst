@@ -19,9 +19,8 @@ namespace XamarinFirst.View
 
             var tutorials = new List<PropertyModel>
             {
-                new PropertyModel("welcome.png", "Commercial", "Available"),
-                new PropertyModel("welcome2.png", "Commercial", "Available"),
-                new PropertyModel("welcome3.png", "Commercial", "Unavailable")
+                new PropertyModel("property1.png", "Commercial", "Available"),
+                new PropertyModel("property2.png", "Commercial", "Available"),
             };
 
             //  myCarousel.ItemsSource = new ObservableCollection<int> { 1, 2, 3, 4, 5 }; // ADD/REMOVE PAGES FROM CAROUSEL ADDING/REMOVING ELEMENTS FROM THE COLLECTION

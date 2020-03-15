@@ -16,8 +16,12 @@
                 <On Platform="iOS" Value="/Asset/montserratBold.ttf#montserratBold"/>
             </OnPlatform>
             <Color x:Key="ThemeBGColor">#286090</Color>
-            <Color x:Key="ThemeTextColor">White</Color>
+            <Color x:Key="ThemeTextColor">#FFF</Color>
             <Color x:Key="ThemeBarChartColor">#4F81BD</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#286090"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

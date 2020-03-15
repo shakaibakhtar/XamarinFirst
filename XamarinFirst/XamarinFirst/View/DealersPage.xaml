@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XamarinFirst.View.DealersPage">
+             x:Class="XamarinFirst.View.DealersPage"
+             Title="Dealers">
     <ContentPage.Content>
         <StackLayout Padding="0">
             <ListView ItemsSource="{Binding Dealers}"
@@ -16,28 +17,29 @@
                             <ContentView>
                                 <StackLayout Padding="10">
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout>
+                                        <StackLayout Padding="10, 0, 0, 0" Orientation="Horizontal">
                                             <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0" IsClippedToBounds="True">
-                                                <Image Source="Logo.png" HeightRequest="40" WidthRequest="40"></Image>
+                                                <Image Source="dp.png" HeightRequest="40" WidthRequest="40"></Image>
                                             </Frame>
                                         </StackLayout>
-                                        <StackLayout Padding="10, 0, 0, 0" 
+                                        <StackLayout Padding="20, 0, 0, 0" 
                                                      Orientation="Vertical">
                                             <Label Text="{Binding Name}" VerticalOptions="Start"
-                                               FontAttributes="Bold"
                                                FontSize="Small"
-                                               FontFamily="{StaticResource ThemeFont}"></Label>
+                                               FontFamily="{StaticResource ThemeFontBold}"
+                                               TextColor="{StaticResource ThemeBGColor}" ></Label>
                                             <Label Text="{Binding Designation}"
                                                FontSize="Micro"
-                                               FontFamily="{StaticResource ThemeFont}"></Label>
+                                               FontFamily="{StaticResource ThemeFontBold}"
+                                               TextColor="{StaticResource ThemeBGColor}"></Label>
                                         </StackLayout>
-                                        <StackLayout Orientation="Vertical"
+                                        <!--<StackLayout Orientation="Vertical"
                                                      HorizontalOptions="EndAndExpand">
                                             <Label Text="{Binding Availability}"
                                                FontAttributes="Bold"
                                                FontSize="Small"
                                                FontFamily="{StaticResource ThemeFont}"></Label>
-                                        </StackLayout>
+                                        </StackLayout>-->
                                     </StackLayout>
                                 </StackLayout>
                             </ContentView>

@@ -11,7 +11,7 @@ namespace XamarinFirst.ViewModel
         public ObservableCollection<TransactionModel> Transactions { get; set; } = new ObservableCollection<TransactionModel>();
 
         string[] BankNames = { "Bank Alfalah Ltd.", "Habib Bank Ltd." };
-        string[] Dates = { "04 March, 2020", "08 March, 2020" };
+        string[] Dates = { "4-Mar-20", "8-Mar-20" };
         string[] AccNumbers = { "1862-212874152", "0230-697833147" };
         string[] Amounts = { "8000000", "5000000" };
         string[] Icons = { "creditIcon.png", "debitIcon.png" };

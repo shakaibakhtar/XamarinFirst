@@ -5,10 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinFirst.View.SplashScreen"
-             BackgroundImage="XamarinFirst.Images.splashbg.jpg">
+             BackgroundImage="splashbg.png">
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Image x:Name="Logo" Source="splashbg.jpg" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="Fill" />
+            <Image x:Name="Logo" Source="Logo.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="SizeProportional" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
             <!--<ScrollView HorizontalOptions="Center" VerticalOptions="Center" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
                 <Grid>
                     <Image HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" x:Name="Logo" Grid.Row="0"/>
