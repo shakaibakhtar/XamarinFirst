@@ -83,9 +83,9 @@ namespace XamarinFirst.View
             }
         }
 
-        private void BtnSearch_Clicked(object sender, EventArgs e)
+        private async void BtnSearch_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Notification", "Search Logic Here", "OK");
+            await Navigation.PushAsync(new CustomSearchResultPage());
         }
 
         //private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

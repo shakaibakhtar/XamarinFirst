@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFirst.View.CustomSearchResultPage"
+             Title="Search Results">
+    <ContentPage.Content>
+        <StackLayout Padding="0">
+            <ListView ItemsSource="{Binding SearchResults}"
+                      HasUnevenRows="True"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10, 0">
+                                    <StackLayout HorizontalOptions="Start" Orientation="Vertical">
+                                        <Image Source="{Binding imageLink}" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="100"                       WidthRequest="100" Aspect="AspectFit"/>
+                                    </StackLayout>
+                                    <StackLayout VerticalOptions="CenterAndExpand"
+                                                     Orientation="Vertical"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     Padding="10, 0, 0, 0">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="homeIcon.png"
+                                                       HorizontalOptions="Start"
+                                                       HeightRequest="20" Aspect="AspectFit"></Image>
+                                            <Label Text="{Binding propertyTitle}"
+                                                       FontSize="Medium"
+                                                       FontFamily="{StaticResource ThemeFontBold}"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="locationIcon.png"
+                                                       HorizontalOptions="Start"
+                                                       HeightRequest="20" Aspect="AspectFit"></Image>
+                                            <Label Text="{Binding propertyAddress}"
+                                                       FontSize="Micro"
+                                                       FontFamily="{StaticResource ThemeFont}"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="priceTagIcon.png"
+                                                       HorizontalOptions="Start"
+                                                       HeightRequest="20" Aspect="AspectFit"></Image>
+                                            <Label Text="{Binding propertyPrice}"
+                                                       FontSize="Small"
+                                                       FontFamily="{StaticResource ThemeFontBold}"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
