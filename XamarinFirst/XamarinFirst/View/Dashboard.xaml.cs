@@ -59,7 +59,7 @@ namespace XamarinFirst.View
             }
             else if (item.Id == 4)
             {
-                //await Detail.Navigation.PushAsync(new AdvanceSearchPage());
+                await Detail.Navigation.PushAsync(new AdvanceSearchPage());
             }
             else if (item.Id == 5)
             {
