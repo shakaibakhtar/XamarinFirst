@@ -8,27 +8,28 @@
              x:Class="XamarinFirst.View.PropertyDetailPage"
              xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions">
     <ContentPage.Content>
-        <ScrollView VerticalOptions="FillAndExpand">
-            <StackLayout VerticalOptions="FillAndExpand">
-                <controls:CarouselViewControl x:Name="myCarousel" Orientation="Vertical" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding myItemsSource}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                    <controls:CarouselViewControl.ItemTemplate> 
-                        <DataTemplate>
-                            <!--  <local:MyView />-->
-                            <!-- where MyView is a ContentView -->
-                            <!--<StackLayout Orientation="Vertical">-->
-                                <Image Source="{Binding PlotNo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" />
-                                <!--<StackLayout Orientation="Horizontal" Margin="30, 30, 30, 0">
+
+        <StackLayout VerticalOptions="FillAndExpand">
+            <controls:CarouselViewControl x:Name="myCarousel" Orientation="Vertical" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding myItemsSource}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <controls:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <!--  <local:MyView />-->
+                        <!-- where MyView is a ContentView -->
+                        <!--<StackLayout Orientation="Vertical">-->
+                        <Image Source="{Binding PlotNo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" />
+                        <!--<StackLayout Orientation="Horizontal" Margin="30, 30, 30, 0">
                                     <Label Text="11A - {Binding PlotType}" FontSize="Small" HorizontalOptions="Start" TextColor="Black" />
                                     <Label Text="10,00,000" FontSize="Small" HorizontalOptions="Center" TextColor="Black" />
                                     <Label Text="Gas, Electricity" FontSize="Small" HorizontalOptions="End" TextColor="Black" />
                                     <Label Text="Gas, Electricity" FontSize="Small" HorizontalOptions="End" TextColor="Black" />
                                 </StackLayout>-->
 
-                            <!--</StackLayout>-->
-                        </DataTemplate>
-                    </controls:CarouselViewControl.ItemTemplate>
-                </controls:CarouselViewControl>
-                <Grid Margin="20, 10, 20, 0">
+                        <!--</StackLayout>-->
+                    </DataTemplate>
+                </controls:CarouselViewControl.ItemTemplate>
+            </controls:CarouselViewControl>
+            <ScrollView>
+                <Grid Margin="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -75,14 +76,14 @@
                     </StackLayout>
                     <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Horizontal">
                         <Label Text="Assigned To:" TextColor="{StaticResource ThemeTextColor}" MinimumWidthRequest="80" FontFamily="{StaticResource ThemeFontBold}" BackgroundColor="{StaticResource ThemeBGColor}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10, 0"/>
-                        <Label FontFamily="{StaticResource ThemeFont}" Text="Block-D, Main Commercial, Soan Gardens" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
+                        <Label FontFamily="{StaticResource ThemeFont}" Text="Fahad Nouman" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
                     </StackLayout>
                 </Grid>
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <!--<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <Button FontFamily="{StaticResource ThemeFont}" x:Name="BtnB" HorizontalOptions="StartAndExpand" TextColor="#0073E0" Text="Back" BackgroundColor="Transparent" Clicked="Handle_Clicked" />
                     <Button FontFamily="{StaticResource ThemeFont}" HorizontalOptions="EndAndExpand" TextColor="#0073E0" Text="Next" CornerRadius="20" BackgroundColor="Transparent" Clicked="Handle_Clicked_1" />
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
+                </StackLayout>-->
+            </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

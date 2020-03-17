@@ -19,10 +19,10 @@
                         <Label Text="City" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox x:Name="list" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" IsVisible="True"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"   
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listCity" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" IsVisible="True"
+                                        TextChanged="listCity_TextChanged"
+                                        QuerySubmitted="listCity_QuerySubmitted"   
+                                        SuggestionChosen="listCity_SuggestionChosen"/>
                                 <Image x:Name="downarrow" Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit">
                                        <!--<Image.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -35,10 +35,10 @@
                         <Label Text="Area" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listArea" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listArea_TextChanged"
+                                        QuerySubmitted="listArea_QuerySubmitted"
+                                        SuggestionChosen="listArea_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -51,37 +51,37 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="0" Orientation="Vertical">
-                        <Label Text="Block#" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Block" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listBlock" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listBlock_TextChanged"
+                                        QuerySubmitted="listBlock_QuerySubmitted"
+                                        SuggestionChosen="listBlock_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Orientation="Vertical">
-                        <Label Text="Street#" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Street" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listStreet" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listStreet_TextChanged"
+                                        QuerySubmitted="listStreet_QuerySubmitted"
+                                        SuggestionChosen="listStreet_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="2" Orientation="Vertical">
-                        <Label Text="Plot#" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Plot" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listPlot" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listPlot_TextChanged"
+                                        QuerySubmitted="listPlot_QuerySubmitted"
+                                        SuggestionChosen="listPlot_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -101,10 +101,10 @@
                         <Label Text="Type" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listPropertyType" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listPropertyType_TextChanged"
+                                        QuerySubmitted="listPropertyType_QuerySubmitted"
+                                        SuggestionChosen="listPropertyType_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -113,10 +113,10 @@
                         <Label Text="Status" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listPropertyStatus" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listPropertyStatus_TextChanged"
+                                        QuerySubmitted="listPropertyStatus_QuerySubmitted"
+                                        SuggestionChosen="listPropertyStatus_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -125,10 +125,10 @@
                         <Label Text="Property Specifications" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listPropertySpecifications" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listPropertySpecifications_TextChanged"
+                                        QuerySubmitted="listPropertySpecifications_QuerySubmitted"
+                                        SuggestionChosen="listPropertySpecifications_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -137,10 +137,10 @@
                         <Label Text="Owner" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listOwners" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listOwners_TextChanged"
+                                        QuerySubmitted="listOwners_QuerySubmitted"
+                                        SuggestionChosen="listOwners_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -149,10 +149,10 @@
                         <Label Text="Assigned To" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listBuyers" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listBuyers_TextChanged"
+                                        QuerySubmitted="listBuyers_QuerySubmitted"
+                                        SuggestionChosen="listBuyers_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -188,10 +188,10 @@
                     <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Vertical">
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox PlaceholderText="Marla" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listSizeUnits" PlaceholderText="Marla" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listSizeUnits_TextChanged"
+                                        QuerySubmitted="listSizeUnits_QuerySubmitted"
+                                        SuggestionChosen="listSizeUnits_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
@@ -214,35 +214,35 @@
                     <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical">
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <Entry Placeholder="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Entry Placeholder="From" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Vertical">
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <Entry Placeholder="5000000" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Entry Placeholder="To" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Vertical">
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
-                                <forms:AutoSuggestBox PlaceholderText="PKR" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
-                                        TextChanged="AutoSuggestBox_TextChanged"
-                                        QuerySubmitted="AutoSuggestBox_QuerySubmitted"
-                                        SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
+                                <forms:AutoSuggestBox x:Name="listCurrencies" PlaceholderText="PKR" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                        TextChanged="listCurrencies_TextChanged"
+                                        QuerySubmitted="listCurrencies_QuerySubmitted"
+                                        SuggestionChosen="listCurrencies_SuggestionChosen"/>
                                 <Image Source="dropDownIcon.png" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="10" Aspect="AspectFit"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
-                    <Label Text="Show Advanced Search" x:Name="lblExpandForm" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="2">
+                    <Label Text="Show Advanced Search" x:Name="lblExpandForm" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="2">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="ShowAdvanceSearchView"></TapGestureRecognizer>
                         </Label.GestureRecognizers>
                     </Label>
                     <Frame CornerRadius="200" Margin="0, 10, 0, 0" Padding="15" IsClippedToBounds="True" HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="2" BackgroundColor="{StaticResource ThemeBGColor}">
-                        <ImageButton Source="searchIcon.png" HeightRequest="50" Aspect="AspectFit" BackgroundColor="Transparent" Clicked="BtnSearch_Clicked"></ImageButton>
+                        <ImageButton Source="searchIcon.png" WidthRequest="50" HeightRequest="50" Aspect="Fill" BackgroundColor="Transparent" Clicked="BtnSearch_Clicked"></ImageButton>
                     </Frame>
                 </Grid>
             </StackLayout>
