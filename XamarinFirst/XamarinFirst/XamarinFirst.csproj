@@ -12,32 +12,39 @@
 
   <ItemGroup>
     <None Remove="Images\creditIcon.png" />
+    <None Remove="Images\cylinderIcon.png" />
     <None Remove="Images\debitIcon.png" />
     <None Remove="Images\dp.png" />
     <None Remove="Images\dropDownIcon.png" />
+    <None Remove="Images\electricityIcon.png" />
     <None Remove="Images\homeIcon.png" />
     <None Remove="Images\homeIconWhite.png" />
     <None Remove="Images\locationIcon.png" />
     <None Remove="Images\locationIconWhite.png" />
     <None Remove="Images\Logo.png" />
+    <None Remove="Images\parkingIcon.png" />
     <None Remove="Images\priceIconWhite.png" />
     <None Remove="Images\priceTagIcon.png" />
     <None Remove="Images\property1.png" />
     <None Remove="Images\property2.png" />
     <None Remove="Images\searchIcon.png" />
     <None Remove="Images\splashbg.png" />
+    <None Remove="Images\waterIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\creditIcon.png" />
+    <EmbeddedResource Include="Images\cylinderIcon.png" />
     <EmbeddedResource Include="Images\debitIcon.png" />
     <EmbeddedResource Include="Images\dp.png" />
     <EmbeddedResource Include="Images\dropDownIcon.png" />
+    <EmbeddedResource Include="Images\electricityIcon.png" />
     <EmbeddedResource Include="Images\homeIcon.png" />
     <EmbeddedResource Include="Images\homeIconWhite.png" />
     <EmbeddedResource Include="Images\locationIcon.png" />
     <EmbeddedResource Include="Images\locationIconWhite.png" />
     <EmbeddedResource Include="Images\Logo.png" />
+    <EmbeddedResource Include="Images\parkingIcon.png" />
     <EmbeddedResource Include="Images\priceIconWhite.png" />
     <EmbeddedResource Include="Images\priceTagIcon.png" />
   </ItemGroup>
@@ -47,6 +54,7 @@
     <EmbeddedResource Include="Images\property2.png" />
     <EmbeddedResource Include="Images\searchIcon.png" />
     <EmbeddedResource Include="Images\splashbg.png" />
+    <EmbeddedResource Include="Images\waterIcon.png" />
   </ItemGroup>
 
   <ItemGroup>

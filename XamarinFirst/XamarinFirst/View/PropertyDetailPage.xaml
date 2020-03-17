@@ -8,27 +8,28 @@
              x:Class="XamarinFirst.View.PropertyDetailPage"
              xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions">
     <ContentPage.Content>
-        <ScrollView VerticalOptions="FillAndExpand">
-            <StackLayout VerticalOptions="FillAndExpand">
-                <controls:CarouselViewControl x:Name="myCarousel" Orientation="Vertical" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding myItemsSource}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                    <controls:CarouselViewControl.ItemTemplate> 
-                        <DataTemplate>
-                            <!--  <local:MyView />-->
-                            <!-- where MyView is a ContentView -->
-                            <!--<StackLayout Orientation="Vertical">-->
-                                <Image Source="{Binding PlotNo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" />
-                                <!--<StackLayout Orientation="Horizontal" Margin="30, 30, 30, 0">
+        <ScrollView>
+            <StackLayout>
+                <controls:CarouselViewControl  x:Name="myCarousel" Orientation="Vertical" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding myItemsSource}" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand">
+                <controls:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <!--  <local:MyView />-->
+                        <!-- where MyView is a ContentView -->
+                        <!--<StackLayout Orientation="Vertical">-->
+                        <Image Source="{Binding PlotNo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" />
+                        <!--<StackLayout Orientation="Horizontal" Margin="30, 30, 30, 0">
                                     <Label Text="11A - {Binding PlotType}" FontSize="Small" HorizontalOptions="Start" TextColor="Black" />
                                     <Label Text="10,00,000" FontSize="Small" HorizontalOptions="Center" TextColor="Black" />
                                     <Label Text="Gas, Electricity" FontSize="Small" HorizontalOptions="End" TextColor="Black" />
                                     <Label Text="Gas, Electricity" FontSize="Small" HorizontalOptions="End" TextColor="Black" />
                                 </StackLayout>-->
 
-                            <!--</StackLayout>-->
-                        </DataTemplate>
-                    </controls:CarouselViewControl.ItemTemplate>
-                </controls:CarouselViewControl>
-                <Grid Margin="20, 10, 20, 0">
+                        <!--</StackLayout>-->
+                    </DataTemplate>
+                </controls:CarouselViewControl.ItemTemplate>
+            </controls:CarouselViewControl>
+          
+                <Grid Margin="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -38,11 +39,12 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
 
                     <StackLayout Grid.Row="0" Grid.Column="0" Padding="5" BackgroundColor="{StaticResource ThemeBGColor}" Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="Red">
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
                             <Image Source="homeIconWhite.png" VerticalOptions="CenterAndExpand" WidthRequest="40" Aspect="AspectFill"/>
                             <Label Text="Plot No" FontSize="Micro" VerticalOptions="CenterAndExpand" FontFamily="{StaticResource ThemeFontBold}"  TextColor="{StaticResource ThemeTextColor}"/>
                         </StackLayout>
@@ -58,7 +60,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                        <Image Source="locationIconWhite.png" WidthRequest="20" HeightRequest="20" BackgroundColor="{StaticResource ThemeBGColor}" HorizontalOptions="FillAndExpand"/>
+                        <Image Source="locationIcon.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="FillAndExpand"/>
                         <Label FontFamily="{StaticResource ThemeFont}" Text="Rawalpindi" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
                     </StackLayout>
                     <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
@@ -74,15 +76,44 @@
                         <Label FontFamily="{StaticResource ThemeFont}" Text="Mehdi Marketing Services, Block-D, Main Commercial, Soan Gardens" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
                     </StackLayout>
                     <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Horizontal">
-                        <Label Text="Assigned To:" TextColor="{StaticResource ThemeTextColor}" MinimumWidthRequest="80" FontFamily="{StaticResource ThemeFontBold}" BackgroundColor="{StaticResource ThemeBGColor}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10, 0"/>
-                        <Label FontFamily="{StaticResource ThemeFont}" Text="Block-D, Main Commercial, Soan Gardens" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
+                        <Label Text="Assigned To:" TextColor="{StaticResource ThemeTextColor}"  FontFamily="{StaticResource ThemeFontBold}" BackgroundColor="{StaticResource ThemeBGColor}" MinimumWidthRequest="60" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10, 0"/>
+                        <Label FontFamily="{StaticResource ThemeFont}" Text="Fahad Nouman" MinimumHeightRequest="50"  FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+                        <Label Text="Assigned By:" TextColor="{StaticResource ThemeTextColor}" FontFamily="{StaticResource ThemeFontBold}" BackgroundColor="{StaticResource ThemeBGColor}"  MinimumWidthRequest="60" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10, 0"/>
+                        <Label FontFamily="{StaticResource ThemeFont}" Text="Fahad Nouman" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" BackgroundColor="#F0F0F0">
+                        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+                                <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="50" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="10">
+                                    <Image Source="cylinderIcon.png" WidthRequest="40" HeightRequest="40"/>
+                                </Frame>
+                                <Label Text="Gas" FontSize="Micro" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="50" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="10">
+                                    <Image Source="electricityIcon.png" WidthRequest="40" HeightRequest="40"/>
+                                </Frame>
+                                <Label Text="Electricity" FontSize="Micro" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="50" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="10">
+                                    <Image Source="waterIcon.png" WidthRequest="40" HeightRequest="40"/>
+                                </Frame>
+                                <Label Text="Water" FontSize="Micro" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="50" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="10">
+                                    <Image Source="parkingIcon.png" WidthRequest="40" HeightRequest="40"/>
+                                </Frame>
+                                <Label Text="Parking" FontSize="Micro" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                            </StackLayout>
+                        </StackLayout>
                     </StackLayout>
                 </Grid>
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                    <Button FontFamily="{StaticResource ThemeFont}" x:Name="BtnB" HorizontalOptions="StartAndExpand" TextColor="#0073E0" Text="Back" BackgroundColor="Transparent" Clicked="Handle_Clicked" />
-                    <Button FontFamily="{StaticResource ThemeFont}" HorizontalOptions="EndAndExpand" TextColor="#0073E0" Text="Next" CornerRadius="20" BackgroundColor="Transparent" Clicked="Handle_Clicked_1" />
-                </StackLayout>
             </StackLayout>
         </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
