@@ -19,7 +19,7 @@
                        BackgroundColor="Red"
                        VerticalOptions="Center"
                        Padding="0,70"
-                       FontFamily="{StaticResource ThemeFont}"
+                       FontFamily="Regular"
                        HorizontalTextAlignment="Center"/>-->
                 <Grid>
                     <Grid.RowDefinitions>
@@ -43,21 +43,21 @@
                         <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
-                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontFamily="Bold"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="Sold Properties:"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Center"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="200"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="End"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Micro"
                                HorizontalTextAlignment="Center"
                                Text="2 Hundred"/>
@@ -76,21 +76,21 @@
                         <StackLayout Padding="10"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
-                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontFamily="Bold"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="Available Properties:"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Center"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="200"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="End"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Micro"
                                HorizontalTextAlignment="Center"
                                Text="2 Hundred"/>
@@ -107,21 +107,21 @@
                         <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
-                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontFamily="Bold"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="This Week Sales:"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Center"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="55,30,000"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="End"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Micro"
                                HorizontalTextAlignment="Center"
                                Text="55 Lakhs, 30 Thousands"/>
@@ -138,21 +138,21 @@
                         <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
-                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontFamily="Bold"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="This Week Sales:"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Center"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="4,55,30,000"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="End"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Micro"
                                HorizontalTextAlignment="Center"
                                Text="4 Crore, 55 Lakhs, 30 Thousands"/>
@@ -169,21 +169,21 @@
                         <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                             <Label TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Start"
-                               FontFamily="{StaticResource ThemeFontBold}"
+                               FontFamily="Bold"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="Total Sales:"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="Center"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Small"
                                HorizontalTextAlignment="Center"
                                Text="10,10,55,30,000"/>
                             <Label BackgroundColor="{StaticResource ThemeBGColor}"
                                TextColor="{StaticResource ThemeTextColor}"
                                VerticalOptions="End"
-                               FontFamily="{StaticResource ThemeFont}"
+                               FontFamily="Regular"
                                FontSize="Micro"
                                HorizontalTextAlignment="Center"
                                Text="10 Arab, 10 Crore, 55 Lakhs, 30 Thousands"/>
@@ -202,7 +202,7 @@
                             TextColor="White"
                             Grid.Row="0"
                             Grid.Column="0"
-                            FontFamily="{StaticResource ThemeFont}"></Button>
+                            FontFamily="Regular"></Button>
                     <Button x:Name="btnPartners"
                             Clicked="btnPartners_Clicked"
                             Text="Partners"
@@ -210,7 +210,7 @@
                             TextColor="White"
                             Grid.Row="0"
                             Grid.Column="1"
-                            FontFamily="{StaticResource ThemeFont}"></Button>
+                            FontFamily="Regular"></Button>
                 </Grid>-->
             </StackLayout>
         </ScrollView>

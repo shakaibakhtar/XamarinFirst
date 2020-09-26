@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XamarinFirst.Model
 {
-    class DealersModel
+    public class DealersModel
     {
         public string Image { get; set; }
         public string Name { get; set; }

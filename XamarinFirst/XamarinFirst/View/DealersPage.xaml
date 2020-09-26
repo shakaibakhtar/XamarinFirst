@@ -26,11 +26,11 @@
                                                      Orientation="Vertical">
                                             <Label Text="{Binding Name}" VerticalOptions="Start"
                                                FontSize="Small"
-                                               FontFamily="{StaticResource ThemeFontBold}"
+                                               FontFamily="Bold"
                                                TextColor="{StaticResource ThemeBGColor}" ></Label>
                                             <Label Text="{Binding Designation}"
                                                FontSize="Micro"
-                                               FontFamily="{StaticResource ThemeFontBold}"
+                                               FontFamily="Bold"
                                                TextColor="{StaticResource ThemeBGColor}"></Label>
                                         </StackLayout>
                                         <!--<StackLayout Orientation="Vertical"
@@ -38,7 +38,7 @@
                                             <Label Text="{Binding Availability}"
                                                FontAttributes="Bold"
                                                FontSize="Small"
-                                               FontFamily="{StaticResource ThemeFont}"></Label>
+                                               FontFamily="Regular"></Label>
                                         </StackLayout>-->
                                     </StackLayout>
                                 </StackLayout>

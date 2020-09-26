@@ -39,7 +39,7 @@
                            HorizontalOptions="Center"
                            Text="Nadeem Ahmad"
                            TextColor="{StaticResource ThemeTextColor}"
-                           FontFamily="{StaticResource ThemeFontBold}"
+                           FontFamily="Bold"
                            Style="{DynamicResource SubtitleStyle}"/>
                 </StackLayout>
             </ListView.Header>
@@ -50,7 +50,7 @@
                             <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontFamily="{StaticResource ThemeFontBold}"
+                    FontFamily="Bold"
                     FontSize="Small"/>
                         </StackLayout>
                     </ViewCell>

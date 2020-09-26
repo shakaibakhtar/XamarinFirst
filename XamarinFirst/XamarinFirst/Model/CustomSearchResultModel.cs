@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XamarinFirst.Model
 {
-    class CustomSearchResultModel
+    public class CustomSearchResultModel
     {
         public string imageLink { get; set; }
         public string propertyTitle { get; set; }

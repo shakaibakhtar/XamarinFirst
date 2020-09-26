@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Entry = Microcharts.Entry;
 
 namespace XamarinFirst.View
 {
@@ -17,47 +16,47 @@ namespace XamarinFirst.View
     {
         static string color = GetHexString((Xamarin.Forms.Color)Application.Current.Resources["ThemeBarChartColor"]);
 
-        List<Entry> entries = new List<Entry>()
+        IEnumerable<ChartEntry> entries = new[]
         {
-            new Entry(250)
+            new ChartEntry(250)
             {
-                Label = "Monday",
+                Label = "Mon",
                 ValueLabel = "250",
                 Color = SKColor.Parse(color)
             },
-            new Entry(150)
+            new ChartEntry(150)
             {
-                Label = "Tuesday",
+                Label = "Tue",
                 ValueLabel = "150",
                 Color = SKColor.Parse(color)
             },
-            new Entry(75)
+            new ChartEntry(75)
             {
-                Label = "Wednesday",
+                Label = "Wed",
                 ValueLabel = "75",
                 Color = SKColor.Parse(color)
             },
-            new Entry(125)
+            new ChartEntry(125)
             {
-                Label = "Thursday",
+                Label = "Thu",
                 ValueLabel = "125",
                 Color = SKColor.Parse(color)
             },
-            new Entry(100)
+            new ChartEntry(100)
             {
-                Label = "Friday",
+                Label = "Fri",
                 ValueLabel = "100",
                 Color = SKColor.Parse(color)
             },
-            new Entry(200)
+            new ChartEntry(200)
             {
-                Label = "Saturday",
+                Label = "Sat",
                 ValueLabel = "200",
                 Color = SKColor.Parse(color)
             },
-            new Entry(300)
+            new ChartEntry(300)
             {
-                Label = "Sunday",
+                Label = "Sun",
                 ValueLabel = "300",
                 Color = SKColor.Parse(color)
             }

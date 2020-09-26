@@ -19,17 +19,17 @@
                                     <StackLayout Orientation="Horizontal">
                                         <StackLayout HorizontalOptions="Start">
                                             <Frame CornerRadius="10" HeightRequest="40" WidthRequest="50" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="10, 0">
-                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="PlotNo" Text="{Binding PlotNo}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" BackgroundColor="{StaticResource ThemeTextColor}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                                <Label FontFamily="Bold" x:Name="PlotNo" Text="{Binding PlotNo}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" BackgroundColor="{StaticResource ThemeTextColor}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                             </Frame>
                                         </StackLayout>
                                         <StackLayout HorizontalOptions="CenterAndExpand">
                                             <Frame CornerRadius="10" HeightRequest="40" WidthRequest="50" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="10, 0">
-                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="PlotSize" Text="{Binding PlotSize}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" BackgroundColor="{StaticResource ThemeTextColor}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                                <Label FontFamily="Bold" x:Name="PlotSize" Text="{Binding PlotSize}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeBGColor}" BackgroundColor="{StaticResource ThemeTextColor}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                             </Frame>
                                         </StackLayout>
                                         <StackLayout HorizontalOptions="End">
                                             <Frame CornerRadius="10" HeightRequest="40" WidthRequest="70" BackgroundColor="{Binding PlotStatusColor}" HorizontalOptions="Start" VerticalOptions="Start" Padding="20, 0">
-                                                <Label FontFamily="{StaticResource ThemeFontBold}" x:Name="PlotStatus" Text="{Binding PlotStatus}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeTextColor}" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                                <Label FontFamily="Bold" x:Name="PlotStatus" Text="{Binding PlotStatus}" FontSize="Small" Grid.Column="1" TextColor="{StaticResource ThemeTextColor}" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                             </Frame>
                                         </StackLayout>
                                     </StackLayout>

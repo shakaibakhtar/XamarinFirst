@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinFirst.ViewModels;
 
 namespace XamarinFirst.View
 {
@@ -15,12 +16,14 @@ namespace XamarinFirst.View
         public ForgotPassword()
         {
             InitializeComponent();
+
+            BindingContext = new ForgotPasswordViewModel(Navigation);
         }
 
-        private void submit_Clicked(object sender, EventArgs e)
-        {
-            DisplayAlert("Notification", "Password Sent To: " + entry_email.Text, "Ok");
-            Navigation.PushAsync(new Verification());
-        }
+        //private void submit_Clicked(object sender, EventArgs e)
+        //{
+        //    DisplayAlert("Notification", "Password Sent To: " + entry_email.Text, "Ok");
+        //    Navigation.PushAsync(new Verification());
+        //}
     }
 }

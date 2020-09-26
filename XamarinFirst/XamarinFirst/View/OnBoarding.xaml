@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView" 
+             xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView" 
+             xmlns:frame="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="XamarinFirst.View.OnBoarding"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <control:XFTabControl x:Name="Tabcomponent" SelectionColor="Transparent" VerticalOptions="FillAndExpand" HeaderColor="Transparent" HeaderHeight="0">
+                <control:XFTabControl.XFTabPages>
+                    <tabview:XFTabPage>
+                        <tabview:XFTabPage.Content>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label FontSize="Large" Text="Verified Properties"></Label>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                                    <frame:PancakeView HasShadow="False" Padding="0" BackgroundColor="#ff0000" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" CornerRadius="0,32,0,0">
+                                        <Button Text="Previous" TextColor="White" BackgroundColor="Transparent" Command="{Binding GotoPreviousCommand}"></Button>
+                                    </frame:PancakeView>
+                                    <frame:PancakeView HasShadow="False" Padding="0" BackgroundColor="#33cc33" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" CornerRadius="32,0,0,0">
+                                        <Button Text="Next" TextColor="White" BackgroundColor="Transparent" Command="{Binding GotoNextCommand}"></Button>
+                                    </frame:PancakeView>
+                                </StackLayout>
+                            </StackLayout>
+                        </tabview:XFTabPage.Content>
+                    </tabview:XFTabPage>
+                    <tabview:XFTabPage>
+                        <tabview:XFTabPage.Content>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label FontSize="Large" Text="Verified Dealers"></Label>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                                    <frame:PancakeView HasShadow="False" Padding="0" BackgroundColor="#ff0000" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" CornerRadius="0,32,0,0">
+                                        <Button Text="Previous" TextColor="White" BackgroundColor="Transparent" Command="{Binding GotoPreviousCommand}"></Button>
+                                    </frame:PancakeView>
+                                    <frame:PancakeView HasShadow="False" Padding="0" BackgroundColor="#33cc33" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" CornerRadius="32,0,0,0">
+                                        <Button Text="Next" TextColor="White" BackgroundColor="Transparent" Command="{Binding GotoNextCommand}"></Button>
+                                    </frame:PancakeView>
+                                </StackLayout>
+                            </StackLayout>
+                        </tabview:XFTabPage.Content>
+                    </tabview:XFTabPage>
+                    <tabview:XFTabPage>
+                        <tabview:XFTabPage.Content>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label FontSize="Large" Text="Quick Deals"></Label>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                                    <frame:PancakeView HasShadow="False" Padding="0" BackgroundColor="#ff0000" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" CornerRadius="0,32,0,0">
+                                        <Button Text="Previous" TextColor="White" BackgroundColor="Transparent" Command="{Binding GotoPreviousCommand}"></Button>
+                                    </frame:PancakeView>
+                                    <frame:PancakeView HasShadow="False" Padding="0" BackgroundColor="#33cc33" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" CornerRadius="32,0,0,0">
+                                        <Button Text="Next" TextColor="White" BackgroundColor="Transparent" Command="{Binding GotoNextCommand}"></Button>
+                                    </frame:PancakeView>
+                                </StackLayout>
+                            </StackLayout>
+                        </tabview:XFTabPage.Content>
+                    </tabview:XFTabPage>
+                </control:XFTabControl.XFTabPages>
+            </control:XFTabControl>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

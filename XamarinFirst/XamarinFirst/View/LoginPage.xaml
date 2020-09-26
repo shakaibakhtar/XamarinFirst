@@ -13,17 +13,26 @@
         </StackLayout>
 
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-            <Entry FontFamily="{StaticResource ThemeFont}" Placeholder="UserName" HorizontalOptions="FillAndExpand"></Entry>
-            <Entry FontFamily="{StaticResource ThemeFont}" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand"></Entry>
-            <Label FontFamily="{StaticResource ThemeFont}" TextDecorations="Underline" Text="Forgot Password?" TextColor="DarkBlue" HorizontalOptions="End" VerticalOptions="Center" >
+            <Entry Text="{Binding User.Username}" FontFamily="Regular" Placeholder="UserName" HorizontalOptions="FillAndExpand"></Entry>
+            <Entry Text="{Binding User.Password}"  FontFamily="Regular" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand"></Entry>
+            <Label FontFamily="Regular" TextDecorations="Underline" Text="Forgot Password?" TextColor="DarkBlue" HorizontalOptions="End" VerticalOptions="Center">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer  
-                        Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
                 </Label.GestureRecognizers>
             </Label>
-            <!--<Label FontFamily="{StaticResource ThemeFont}" Text="Don't have an account?" HorizontalTextAlignment="Center" HorizontalOptions="Center"></Label>
-            <Button FontFamily="{StaticResource ThemeFont}" Text="Sign up" HorizontalOptions="Center" VerticalOptions="End" x:Name="signup" Clicked="signup_Clicked" TextColor="#286090"></Button>-->
-            <Button FontFamily="{StaticResource ThemeFontBold}" Margin="0, 50, 0, 0" Text="Log In" x:Name="btnLogin" Clicked="btnLogin_Clicked" TextColor="{DynamicResource ThemeTextColor}" BackgroundColor="{DynamicResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="End"></Button>
+            <!--<Label FontFamily="Regular" Text="Don't have an account?" HorizontalTextAlignment="Center" HorizontalOptions="Center"></Label>
+            <Button FontFamily="Regular" Text="Sign up" HorizontalOptions="Center" VerticalOptions="End" x:Name="signup" Clicked="signup_Clicked" TextColor="#286090"></Button>-->
+            <Label Text="DON'T HAVE AN ACCOUNT?" FontFamily="Bold" Margin="0, 50, 0, 0"  HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OpenSignupPageCommand}"/>
+                    </Label.GestureRecognizers>
+            </Label>
+                <Button FontFamily="Bold" Text="Log In" Command="{Binding LoginCommand}" Margin="0, 20, 0, 0" TextColor="{DynamicResource ThemeTextColor}" BackgroundColor="{DynamicResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="End"></Button> 
+                <Label Text="SKIP" FontFamily="Bold" TextColor="Gray" VerticalOptions="EndAndExpand" HorizontalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding SkipLoginCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
         </StackLayout>
     </StackLayout>
     </ScrollView>

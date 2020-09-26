@@ -18,8 +18,8 @@
                    IsClippedToBounds="True">
                     <Image Source="verificationIcon.png" HorizontalOptions="Center" WidthRequest="80" HeightRequest="80"></Image>
                 </Frame>
-                <Entry FontFamily="{StaticResource ThemeFont}" VerticalOptions="Center" Keyboard="Email" Margin="0, 20" x:Name="entryVerificationCode" Placeholder="Verification Code"></Entry>
-                <Button FontFamily="{StaticResource ThemeFontBold}" BackgroundColor="{DynamicResource ThemeBGColor}" TextColor="{DynamicResource ThemeTextColor}" Text="Verify" HorizontalOptions="Center" x:Name="ok" Clicked="ok_Clicked" Margin="0, 20"></Button>
+                <Entry Text="{Binding SecurityCode}" FontFamily="Regular" VerticalOptions="Center" Keyboard="Text" Margin="0, 20" Placeholder="Verification Code"></Entry>
+                <Button FontFamily="Bold" BackgroundColor="{DynamicResource ThemeBGColor}" TextColor="{DynamicResource ThemeTextColor}" Text="Verify" HorizontalOptions="Center" Command="{Binding VerifyCodeCommand}" Margin="0, 20"></Button>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

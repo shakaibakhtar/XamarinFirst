@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFirst.View.HomePageVisitor"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <SearchBar HorizontalOptions="FillAndExpand" VerticalOptions="Start"></SearchBar>
+
+                <CollectionView ItemsSource="{Binding HousingSocieties}" HeightRequest="110" ItemsLayout="HorizontalList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Column="0" Spacing="10" Orientation="Vertical">
+                                    <Frame BackgroundColor="White" Padding="0" CornerRadius="30" HasShadow="False" IsClippedToBounds="True">
+                                        <Image Source="{Binding SocietyImage}" Aspect="AspectFill" HeightRequest="60" WidthRequest="60" />
+                                    </Frame>
+                                    <Label Text="{Binding SocietyName}" TextColor="Black" FontAttributes="Bold" LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Label Text="Featured Properties" FontFamily="Bold" HorizontalOptions="FillAndExpand"></Label>
+                <CarouselView ItemsSource="{Binding FeaturedProperties}" HeightRequest="400" VerticalOptions="Start">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="0" />
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical" Padding="10">
+                                <Image Source="{Binding PropertyImage}" HeightRequest="240" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></Image>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Name:" FontFamily="Bold"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding PropertyName}" FontFamily="Regular"/>
+
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Demand:" FontFamily="Bold"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Demand}" FontFamily="Regular"/>
+
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Address:" FontFamily="Bold"/>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding PropertyAddress}" FontFamily="Regular"/>
+                                </Grid>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+
+                <Label Text="Recent Properties" FontFamily="Bold" HorizontalOptions="FillAndExpand"></Label>
+                <ListView ItemsSource="{Binding RecentProperties}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ContentView>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10, 0">
+                                        <StackLayout HorizontalOptions="Start" Orientation="Vertical">
+                                            <Image Source="{Binding imageLink}" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="100"                       WidthRequest="100" Aspect="AspectFit"/>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="CenterAndExpand"
+                                                     Orientation="Vertical"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     Padding="10, 0, 0, 0">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="homeIcon.png"
+                                                       HorizontalOptions="Start"
+                                                       HeightRequest="20" Aspect="AspectFit"></Image>
+                                                <Label Text="{Binding propertyTitle}"
+                                                       FontSize="Medium"
+                                                       FontFamily="Bold"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="locationIcon.png"
+                                                       HorizontalOptions="Start"
+                                                       HeightRequest="20" Aspect="AspectFit"></Image>
+                                                <Label Text="{Binding propertyAddress}"
+                                                       FontSize="Micro"
+                                                       FontFamily="Regular"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="priceTagIcon.png"
+                                                       HorizontalOptions="Start"
+                                                       HeightRequest="20" Aspect="AspectFit"></Image>
+                                                <Label Text="{Binding propertyPrice}"
+                                                       FontSize="Small"
+                                                       FontFamily="Bold"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       TextColor="{StaticResource ThemeBGColor}"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

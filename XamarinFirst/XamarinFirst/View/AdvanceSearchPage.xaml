@@ -16,7 +16,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="0" Orientation="Vertical">
-                        <Label Text="City" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="City" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listCity" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" IsVisible="True"
@@ -32,7 +32,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Orientation="Vertical">
-                        <Label Text="Area" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Area" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listArea" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -51,7 +51,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="0" Orientation="Vertical">
-                        <Label Text="Block" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Block" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listBlock" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -63,7 +63,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Orientation="Vertical">
-                        <Label Text="Street" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Street" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listStreet" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -75,7 +75,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="2" Orientation="Vertical">
-                        <Label Text="Plot" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Plot" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listPlot" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -98,7 +98,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Vertical">
-                        <Label Text="Type" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Type" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listPropertyType" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -110,7 +110,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Vertical">
-                        <Label Text="Status" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Status" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listPropertyStatus" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -122,7 +122,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.ColumnSpan="2" Grid.Row="1" Orientation="Vertical">
-                        <Label Text="Property Specifications" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Property Specifications" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listPropertySpecifications" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -134,7 +134,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Vertical">
-                        <Label Text="Owner" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Owner" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listOwners" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -146,7 +146,7 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Vertical">
-                        <Label Text="Assigned To" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Assigned To" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
                             <StackLayout Orientation="Horizontal">
                                 <forms:AutoSuggestBox x:Name="listBuyers" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
@@ -169,7 +169,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <StackLayout Grid.ColumnSpan="3" Grid.Row="0" Orientation="Vertical">
-                        <Label Text="Size" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Size" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                     </StackLayout>
                     <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical">
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
@@ -209,7 +209,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <StackLayout Grid.ColumnSpan="3" Grid.Row="0" Orientation="Vertical">
-                        <Label Text="Price" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
+                        <Label Text="Price" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" FontSize="Medium" Margin="15, 0"/>
                     </StackLayout>
                     <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical">
                         <Frame CornerRadius="50" Padding="15, 0" IsClippedToBounds="True">
@@ -236,7 +236,7 @@
                             </StackLayout>
                         </Frame>
                     </StackLayout>
-                    <Label Text="Show Advanced Search" x:Name="lblExpandForm" FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="2">
+                    <Label Text="Show Advanced Search" x:Name="lblExpandForm" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="2">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="ShowAdvanceSearchView"></TapGestureRecognizer>
                         </Label.GestureRecognizers>

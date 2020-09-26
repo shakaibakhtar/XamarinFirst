@@ -4,12 +4,16 @@ using System.Text;
 
 namespace XamarinFirst.Model
 {
-    class PropertyModel
+    public class PropertyModel
     {
         public string PlotNo { get; set; }
         public string PlotSize { get; set; }
         public string PlotStatus { get; set; }
         public string PlotStatusColor { get; set; }
+        public string PropertyImage { get; set; }
+        public string PropertyName { get; set; }
+        public double Demand { get; set; }
+        public string PropertyAddress { get; set; }
 
         public PropertyModel()
         {}

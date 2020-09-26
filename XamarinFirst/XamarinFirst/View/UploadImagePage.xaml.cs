@@ -1,7 +1,5 @@
 ﻿using Plugin.Media;
 using Plugin.Media.Abstractions;
-using Plugin.Permissions;
-using Plugin.Permissions.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +28,7 @@ namespace XamarinFirst.View
                 await CrossMedia.Current.Initialize();
                 if (!CrossMedia.Current.IsPickPhotoSupported)
                 {
-                    await DisplayAlert("Not Supported", "asdsad", "OK");
+                    await DisplayAlert("Not Supported", "Selecting Image from Gallery not supported", "OK");
                     return;
                 }
 

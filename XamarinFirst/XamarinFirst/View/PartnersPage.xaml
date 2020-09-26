@@ -24,10 +24,10 @@
                                         </StackLayout>
                                         <StackLayout Padding="20, 0, 0, 0" 
                                                      Orientation="Vertical">
-                                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" Text="{Binding Name}" VerticalOptions="Start"
+                                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" Text="{Binding Name}" VerticalOptions="Start"
                                                FontAttributes="Bold"
                                                FontSize="Small"></Label>
-                                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeBGColor}" Text="{Binding Designation}"
+                                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}" Text="{Binding Designation}"
                                                FontSize="Micro"></Label>
                                         </StackLayout>
                                         <!--<StackLayout Orientation="Vertical"

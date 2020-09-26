@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinFirst.ViewModel;
 
 namespace XamarinFirst.View
 {
@@ -16,15 +17,9 @@ namespace XamarinFirst.View
         {
             InitializeComponent();
 
-            _ = LongRunningOperationAsync();
+            BindingContext = new SplashScreenViewModel(Navigation);
         }
 
-        public async Task<int> LongRunningOperationAsync() // assume we return an int from this long running operation 
-        {
-            await Task.Delay(2000); // 1 second delay
-            Application.Current.MainPage = new NavigationPage(new LoginPage());
-
-            return 1;
-        }
+        
     }
 }

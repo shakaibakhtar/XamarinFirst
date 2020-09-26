@@ -35,8 +35,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}"  TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Title" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}"  TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Sold Property" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                            <Label FontFamily="Regular"  TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Title" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold"  TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Sold Property" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
                         </StackLayout>
                     </Frame>
 
@@ -47,8 +47,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Amount" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="10000" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Amount" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="10000" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
                     <Frame CornerRadius="100" BackgroundColor="{StaticResource ThemeBGColor}"
@@ -58,8 +58,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Time, Date" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="1:45 PM, 10 Jan, 2020" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Time, Date" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="1:45 PM, 10 Jan, 2020" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
 
@@ -70,8 +70,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Made By User" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Nouman" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Made By User" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Nouman" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
 
@@ -82,8 +82,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Transaction Type" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Office Expense" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Transaction Type" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Office Expense" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
 
@@ -94,8 +94,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Account Debited" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="1862-57482453" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Account Debited" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="1862-57482453" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
 
@@ -106,8 +106,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Account Credited" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="0230-558564778" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Account Credited" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="0230-558564778" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
 
@@ -118,8 +118,8 @@
                    Padding="30, 10"
                    IsClippedToBounds="True">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label FontFamily="{StaticResource ThemeFont}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Note" HorizontalOptions="CenterAndExpand"/>
-                            <Label FontFamily="{StaticResource ThemeFontBold}" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Paid for kitchen material" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Regular" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Note" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Bold" TextColor="{StaticResource ThemeTextColor}" FontSize="Small" Text="Paid for kitchen material" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
                 </Grid>

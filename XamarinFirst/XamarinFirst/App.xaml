@@ -7,14 +7,14 @@
              x:Class="XamarinFirst.App">
     <Application.Resources>
         <ResourceDictionary>
-            <OnPlatform x:TypeArguments="x:String" x:Key="ThemeFont">
+            <!--<OnPlatform x:TypeArguments="x:String" x:Key="ThemeFont">
                 <On Platform="Android" Value="montserrat.ttf#montserrat"/>
                 <On Platform="iOS" Value="/Asset/montserrat.ttf#montserrat"/>
             </OnPlatform>
             <OnPlatform x:TypeArguments="x:String" x:Key="ThemeFontBold">
                 <On Platform="Android" Value="montserratBold.ttf#montserratBold"/>
                 <On Platform="iOS" Value="/Asset/montserratBold.ttf#montserratBold"/>
-            </OnPlatform>
+            </OnPlatform>-->
             <Color x:Key="ThemeBGColor">#286090</Color>
             <Color x:Key="ThemeTextColor">#FFF</Color>
             <Color x:Key="ThemeBarChartColor">#4F81BD</Color>
