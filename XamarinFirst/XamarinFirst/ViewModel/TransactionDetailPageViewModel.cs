@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using XamarinFirst.Model;
+using Plugin.Screenshot;
 
 namespace XamarinFirst.ViewModel
 {
@@ -28,10 +30,11 @@ namespace XamarinFirst.ViewModel
         {
             get
             {
-                return new Command(() =>
+                return new Command(async () =>
                 {
-                    Application.Current.MainPage.DisplayAlert("Notification", "Screenshot Captured", "OK");
-            });
+                    string path = await CrossScreenshot.Current.CaptureAndSaveAsync();
+                    await Application.Current.MainPage.DisplayAlert("Notification", "Screenshot saved to " + path, "OK");
+                });
             }
         }
         #endregion
