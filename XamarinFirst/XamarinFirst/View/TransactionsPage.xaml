@@ -10,7 +10,7 @@
         <StackLayout Padding="0">
             <ListView ItemsSource="{Binding Transactions}"
                       HasUnevenRows="True"
-                      ItemSelected="ListView_ItemSelected">
+                      SelectedItem="{Binding SelectedTransaction, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -20,7 +20,7 @@
                                         <StackLayout HorizontalOptions="Start" Orientation="Vertical">
                                             <Frame CornerRadius="60" HeightRequest="50" WidthRequest="50" BackgroundColor="{Binding Color}" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="5">
                                                 <!--<StackLayout Orientation="Horizontal">-->
-                                                <Label FontFamily="Bold" x:Name="LblTransactionType" Text="{Binding TransactionType}"                 FontSize="Title" Grid.Column="1" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"                         HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                                <Label FontFamily="Bold" Text="{Binding TransactionType}" FontSize="Title" Grid.Column="1" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                                 <!--<Image Source="{Binding trxIcon}" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>-->
                                                 <!--</StackLayout>-->
                                             </Frame>
@@ -32,10 +32,10 @@
                                                      HorizontalOptions="FillAndExpand"
                                                      Padding="10, 0, 0, 0">
                                             <Label Text="{Binding Amount, StringFormat='{0:F0}'}"
-                                               FontSize="Small"
-                                               HorizontalOptions="Start"
-                                               FontFamily="Bold"
-                                               TextColor="{StaticResource ThemeBGColor}"></Label>
+                                                   FontSize="Small"
+                                                   HorizontalOptions="Start"
+                                                   FontFamily="Bold"
+                                                   TextColor="{StaticResource ThemeBGColor}"></Label>
                                             <StackLayout Orientation="Horizontal">
                                                 <Label Text="{Binding BankName}"
                                                        FontSize="Small"
@@ -53,13 +53,15 @@
                                                      HorizontalOptions="EndAndExpand"
                                                      VerticalOptions="CenterAndExpand">
                                             <Label Text="{Binding AccountNo}"
-                                               FontSize="Small"
-                                               FontFamily="Regular"
+                                                   FontSize="Small"
+                                                   HorizontalTextAlignment="End"
+                                                   FontFamily="Regular"
                                                    HorizontalOptions="EndAndExpand"
                                                    TextColor="{StaticResource ThemeBGColor}"></Label>
                                             <Label Text="{Binding Date}"
-                                               FontSize="Small"
-                                               FontFamily="Regular"
+                                                   FontSize="Small"
+                                                   HorizontalTextAlignment="End"
+                                                   FontFamily="Regular"
                                                    HorizontalOptions="EndAndExpand"
                                                    TextColor="{StaticResource ThemeBGColor}"></Label>
                                         </StackLayout>

@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using Xamarin.Forms;
 using XamarinFirst.Model;
+using XamarinFirst.View;
 
 namespace XamarinFirst.ViewModel
 {
-    class TransactionViewModel
+    public class TransactionViewModel:BaseViewModel
     {
-        public ObservableCollection<TransactionModel> Transactions { get; set; } = new ObservableCollection<TransactionModel>();
+        #region Properties & Variables
+        INavigation navigation;
+        public ObservableCollection<TransactionModel> Transactions { get; set; }
 
         string[] BankNames = { "Bank Alfalah Ltd.", "Habib Bank Ltd." };
         string[] Dates = { "4-Mar-20", "8-Mar-20" };
@@ -18,8 +22,34 @@ namespace XamarinFirst.ViewModel
         string[] Colors = { "#00B41E", "#D40404" };
         string[] TransactionType = { "C", "D" };
 
-        public TransactionViewModel()
+        TransactionModel _SelectedTransaction;
+        public TransactionModel SelectedTransaction
         {
+            get
+            {
+                return _SelectedTransaction;
+            }
+            set
+            {
+                if(value != null)
+                {
+                    _SelectedTransaction = value;
+                    navigation.PushAsync(new TransactionDetail());
+                }
+
+                _SelectedTransaction = null;
+                OnPropertyChanged();
+            }
+        }
+        #endregion
+
+        #region Constructors
+        public TransactionViewModel(INavigation navigation)
+        {
+            this.navigation = navigation;
+
+            Transactions = new ObservableCollection<TransactionModel>();
+
             for (int i = 0; i < 15; i++)
             {
                 TransactionModel transaction = new TransactionModel();
@@ -34,5 +64,6 @@ namespace XamarinFirst.ViewModel
                 Transactions.Add(transaction);
             }
         }
+        #endregion
     }
 }

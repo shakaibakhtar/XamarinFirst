@@ -17,20 +17,20 @@ namespace XamarinFirst.View
         public TransactionsPage()
         {
             InitializeComponent();
-            BindingContext = new TransactionViewModel();
+            BindingContext = new TransactionViewModel(Navigation);
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if(e.SelectedItem == null)
-            {
-                return; // catch deselection
-            }
+        //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if(e.SelectedItem == null)
+        //    {
+        //        return; // catch deselection
+        //    }
 
-            TransactionModel transaction = e.SelectedItem as TransactionModel;
-            Navigation.PushAsync(new TransactionDetail());
-            ((ListView)sender).SelectedItem = null;
-            //DisplayAlert(transaction.Title, transaction.DateTime + "==>" + transaction.TransactionBy + " ==> " + transaction.Amount, "OK");
-        }
+        //    TransactionModel transaction = e.SelectedItem as TransactionModel;
+        //    Navigation.PushAsync(new TransactionDetail());
+        //    ((ListView)sender).SelectedItem = null;
+        //    //DisplayAlert(transaction.Title, transaction.DateTime + "==>" + transaction.TransactionBy + " ==> " + transaction.Amount, "OK");
+        //}
     }
 }

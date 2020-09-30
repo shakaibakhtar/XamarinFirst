@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XamarinFirst.Model
 {
-    class TransactionModel
+    public class TransactionModel
     {
         public string BankName { get; set; }
         public string Date { get; set; }
