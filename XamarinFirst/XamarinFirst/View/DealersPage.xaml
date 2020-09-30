@@ -10,7 +10,7 @@
         <StackLayout Padding="0">
             <ListView ItemsSource="{Binding Dealers}"
                       HasUnevenRows="True"
-                      ItemSelected="ListView_ItemSelected">
+                      SelectedItem="{Binding SelectedDealer, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -19,19 +19,19 @@
                                     <StackLayout Orientation="Horizontal">
                                         <StackLayout Padding="10, 0, 0, 0" Orientation="Horizontal">
                                             <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0" IsClippedToBounds="True">
-                                                <Image Source="dp.png" HeightRequest="40" WidthRequest="40"></Image>
+                                                <Image Source="{Binding Image}" HeightRequest="40" WidthRequest="40"></Image>
                                             </Frame>
                                         </StackLayout>
                                         <StackLayout Padding="20, 0, 0, 0" 
                                                      Orientation="Vertical">
                                             <Label Text="{Binding Name}" VerticalOptions="Start"
-                                               FontSize="Small"
-                                               FontFamily="Bold"
-                                               TextColor="{StaticResource ThemeBGColor}" ></Label>
+                                                   FontSize="Small"
+                                                   FontFamily="Bold"
+                                                   TextColor="{StaticResource ThemeBGColor}" ></Label>
                                             <Label Text="{Binding Designation}"
-                                               FontSize="Micro"
-                                               FontFamily="Bold"
-                                               TextColor="{StaticResource ThemeBGColor}"></Label>
+                                                   FontSize="Micro"
+                                                   FontFamily="Bold"
+                                                   TextColor="{StaticResource ThemeBGColor}"></Label>
                                         </StackLayout>
                                         <!--<StackLayout Orientation="Vertical"
                                                      HorizontalOptions="EndAndExpand">

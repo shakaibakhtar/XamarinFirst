@@ -15,18 +15,18 @@ namespace XamarinFirst.View
         public DealersPage()
         {
             InitializeComponent();
-            BindingContext = new DealersViewModel();
+            BindingContext = new DealersViewModel(Navigation);
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-            {
-                return; // catch deselection
-            }
+        //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItem == null)
+        //    {
+        //        return; // catch deselection
+        //    }
 
-            ((ListView)sender).SelectedItem = null;
-            Navigation.PushAsync(new UserProfile());
-        }
+        //    ((ListView)sender).SelectedItem = null;
+        //    Navigation.PushAsync(new UserProfile());
+        //}
     }
 }
