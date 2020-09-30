@@ -10,13 +10,13 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <controls:CarouselViewControl  x:Name="myCarousel" Orientation="Vertical" InterPageSpacing="10" Position="{Binding myPosition}" ItemsSource="{Binding myItemsSource}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <controls:CarouselViewControl Orientation="Horizontal" ShowIndicators="True" IndicatorsTintColor="#0073E0" InterPageSpacing="10" Position="{Binding myPosition, Mode=TwoWay}" ItemsSource="{Binding PropertyImages}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <controls:CarouselViewControl.ItemTemplate>
                     <DataTemplate>
                         <!--  <local:MyView />-->
                         <!-- where MyView is a ContentView -->
                         <!--<StackLayout Orientation="Vertical">-->
-                        <Image Source="{Binding PlotNo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" />
+                        <Image Source="{Binding PropertyImage}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" />
                         <!--<StackLayout Orientation="Horizontal" Margin="30, 30, 30, 0">
                                     <Label Text="11A - {Binding PlotType}" FontSize="Small" HorizontalOptions="Start" TextColor="Black" />
                                     <Label Text="10,00,000" FontSize="Small" HorizontalOptions="Center" TextColor="Black" />
@@ -46,41 +46,41 @@
 
                     <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Padding="5" BackgroundColor="{StaticResource ThemeBGColor}" Orientation="Horizontal">
                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                            <Image Source="homeIconWhite.png" VerticalOptions="CenterAndExpand" WidthRequest="40" Aspect="AspectFill"/>
+                            <Image Source="homeIconWhite.png" VerticalOptions="CenterAndExpand" WidthRequest="30" Aspect="AspectFit"/>
                             <Label Text="Plot No" FontSize="Micro" VerticalOptions="CenterAndExpand" FontFamily="Bold"  TextColor="{StaticResource ThemeTextColor}"/>
                         </StackLayout>
-                        <Label FontFamily="Bold" Text="11-A" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource ThemeTextColor}" />
+                        <Label FontFamily="Bold" Text="{Binding PlotNo}" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource ThemeTextColor}" />
                     </StackLayout>
 
                     <StackLayout Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="{StaticResource ThemeBGColor}" Orientation="Horizontal">
                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                            <Image Source="priceIconWhite.png" VerticalOptions="CenterAndExpand" WidthRequest="30" Aspect="AspectFill"/>
+                            <Image Source="priceIconWhite.png" VerticalOptions="CenterAndExpand" WidthRequest="30" Aspect="AspectFit"/>
                             <Label Text="Price" FontSize="Micro" VerticalOptions="CenterAndExpand" FontFamily="Bold"  TextColor="{StaticResource ThemeTextColor}"/>
                         </StackLayout>
-                        <Label FontFamily="Bold" Text="30,000,000" FontSize="Small" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource ThemeTextColor}" />
+                        <Label FontFamily="Bold" Text="{Binding Price}" FontSize="Small" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource ThemeTextColor}" />
                     </StackLayout>
 
                     <StackLayout Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal">
                         <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                            <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" IsVisible="{Binding HasGas}">
                                 <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="15" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="5">
                                     <Image Source="cylinderIcon.png"/>
                                 </Frame>
                                 <Label Text="Gas" FontSize="Micro" FontFamily="Regular" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
                             </StackLayout>
-                            <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" IsVisible="{Binding HasElectricity}">
                                 <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="15" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="5">
                                     <Image Source="electricityIcon.png"/>
                                 </Frame>
                                 <Label Text="Electricity" FontSize="Micro" FontFamily="Regular" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
                             </StackLayout>
-                            <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" IsVisible="{Binding HasWater}">
                                 <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="15" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="5">
                                     <Image Source="waterIcon.png"/>
                                 </Frame>
                                 <Label Text="Water" FontSize="Micro" FontFamily="Regular" TextColor="{StaticResource ThemeBGColor}" HorizontalOptions="Center" VerticalOptions="Start"></Label>
                             </StackLayout>
-                            <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" IsVisible="{Binding HasParking}">
                                 <Frame BackgroundColor="{StaticResource ThemeBGColor}" CornerRadius="15" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="5">
                                     <Image Source="parkingIcon.png"/>
                                 </Frame>
@@ -91,16 +91,16 @@
                     
                     <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal">
                         <Image Source="buildingIcon.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start"/>
-                        <Label FontFamily="Regular" Text="Type of property" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
+                        <Label FontFamily="Regular" Text="{Binding PropertyType}" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal">
                         <Image Source="locationIcon.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start"/>
-                        <Label FontFamily="Regular" Text="Street 4, Block-D, Main Commercial, Lohi Beer, Soan Gardens, Islamabad" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
+                        <Label FontFamily="Regular" Text="{Binding Address}" FontSize="Small" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ThemeBGColor}" />
                     </StackLayout>
 
                     <Label Grid.Row="4" Grid.Column="0" Text="Description:" FontFamily="Bold" TextColor="{StaticResource ThemeBGColor}"></Label>
-                    <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontFamily="Regular" FontSize="Small" Text="Mehdi Marketing Services, Block-D, Main Commercial, Soan Gardens" TextColor="{StaticResource ThemeBGColor}"></Label>
+                    <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontFamily="Regular" FontSize="Small" Text="{Binding Description}" TextColor="{StaticResource ThemeBGColor}"></Label>
 
 
                     <!--<StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">

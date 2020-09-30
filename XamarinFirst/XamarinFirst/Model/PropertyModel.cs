@@ -11,6 +11,7 @@ namespace XamarinFirst.Model
         public string PlotStatus { get; set; }
         public string PlotStatusColor { get; set; }
         public string PropertyImage { get; set; }
+        public string PropertyType { get; set; }
         public string PropertyName { get; set; }
         public double Demand { get; set; }
         public string PropertyAddress { get; set; }
