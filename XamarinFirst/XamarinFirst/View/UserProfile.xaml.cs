@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinFirst.ViewModel;
 
 namespace XamarinFirst.View
 {
@@ -15,6 +16,8 @@ namespace XamarinFirst.View
         public UserProfile()
         {
             InitializeComponent();
+
+            BindingContext = new UserProfilePageViewModel(Navigation);
         }
     }
 }
