@@ -16,19 +16,7 @@ namespace XamarinFirst.View
         public Properties()
         {
             InitializeComponent();
-            BindingContext = new PropertiesViewModel();
-        }
-
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-            {
-                return; // catch deselection
-            }
-
-            PropertyModel propertyModel = e.SelectedItem as PropertyModel;
-            Navigation.PushAsync(new PropertyDetailPage());
-            ((ListView)sender).SelectedItem = null;
+            BindingContext = new PropertiesViewModel(Navigation);
         }
     }
 }
