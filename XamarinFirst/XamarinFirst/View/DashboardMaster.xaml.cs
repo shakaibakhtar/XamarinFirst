@@ -15,49 +15,48 @@ namespace XamarinFirst.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardMaster : ContentPage
     {
-        public ListView ListView;
+        //public ListView ListView;
         
         public DashboardMaster()
         {
             InitializeComponent();
-            this.
-            BindingContext = new DashboardMasterViewModel();
-            ListView = MenuItemsListView;
+            //this.BindingContext = new DashboardMasterViewModel();
+            //ListView = MenuItemsListView;
         }
 
-        class DashboardMasterViewModel : INotifyPropertyChanged
-        {
-            public ObservableCollection<DashboardMasterMenuItem> MenuItems { get; set; }
+        //class DashboardMasterViewModel : INotifyPropertyChanged
+        //{
+        //    public ObservableCollection<DashboardMasterMenuItem> MenuItems { get; set; }
 
-            public DashboardMasterViewModel()
-            {
-                MenuItems = new ObservableCollection<DashboardMasterMenuItem>(new[]
-                {
-                    new DashboardMasterMenuItem { Id = 0, Title = "Properties" },
-                    new DashboardMasterMenuItem { Id = 1, Title = "Partners" },
-                    new DashboardMasterMenuItem { Id = 2, Title = "Dealers" },
-                    new DashboardMasterMenuItem { Id = 3, Title = "Transactions" },
-                    new DashboardMasterMenuItem { Id = 4, Title = "Advance Search" },
-                    new DashboardMasterMenuItem { Id = 5, Title = "Settings" },
-                });
-            }
+        //    public DashboardMasterViewModel()
+        //    {
+        //        MenuItems = new ObservableCollection<DashboardMasterMenuItem>(new[]
+        //        {
+        //            new DashboardMasterMenuItem { Id = 0, Title = "Properties" },
+        //            new DashboardMasterMenuItem { Id = 1, Title = "Partners" },
+        //            new DashboardMasterMenuItem { Id = 2, Title = "Dealers" },
+        //            new DashboardMasterMenuItem { Id = 3, Title = "Transactions" },
+        //            new DashboardMasterMenuItem { Id = 4, Title = "Advance Search" },
+        //            new DashboardMasterMenuItem { Id = 5, Title = "Settings" },
+        //        });
+        //    }
 
-            #region INotifyPropertyChanged Implementation
-            public event PropertyChangedEventHandler PropertyChanged;
-            void OnPropertyChanged([CallerMemberName] string propertyName = "")
-            {
-                if (PropertyChanged == null)
-                    return;
+        //    #region INotifyPropertyChanged Implementation
+        //    public event PropertyChangedEventHandler PropertyChanged;
+        //    void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        //    {
+        //        if (PropertyChanged == null)
+        //            return;
 
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-            #endregion
-        }
+        //        PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        //    }
+        //    #endregion
+        //}
 
-        private void ProfilePicture_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PopToRootAsync();
-            Navigation.PushAsync(new UserProfile());
-        }
+        //private void ProfilePicture_Tapped(object sender, EventArgs e)
+        //{
+        //    Navigation.PopToRootAsync();
+        //    Navigation.PushAsync(new UserProfile());
+        //}
     }
 }

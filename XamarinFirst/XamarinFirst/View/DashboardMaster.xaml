@@ -8,9 +8,10 @@
              Title="Master">
     <StackLayout>
         <ListView x:Name="MenuItemsListView"
-              SeparatorVisibility="Default"
-              HasUnevenRows="true"
-              ItemsSource="{Binding MenuItems}">
+                  SeparatorVisibility="Default"
+                  HasUnevenRows="true"
+                  ItemsSource="{Binding MenuItems}"
+                  SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
 
             <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -24,20 +25,20 @@
             <ListView.Header>
                 <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource ThemeBGColor}">
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ProfilePicture_Tapped"></TapGestureRecognizer>
+                        <TapGestureRecognizer Command="{Binding OpenProfilePageCommand}"></TapGestureRecognizer>
                     </StackLayout.GestureRecognizers>
-                    <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="2" IsClippedToBounds="True">
-                        <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0" Padding="0" IsClippedToBounds="True">
-                            <Image Source="dp.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
+                    <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" Padding="2" HasShadow="False" IsClippedToBounds="True">
+                        <Frame CornerRadius="60" HeightRequest="100" WidthRequest="100" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0" Padding="0" HasShadow="False" IsClippedToBounds="True">
+                            <Image Source="{Binding dpSrc}" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
                                 <!--<Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="ProfilePicture_Tapped"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>-->
                             </Image>
                         </Frame>
                     </Frame>
-                    <Label Margin="0, 0, 0, 30" 
+                    <Label Margin="0, 0, 0, 30"
                            HorizontalOptions="Center"
-                           Text="Nadeem Ahmad"
+                           Text="{Binding userName}"
                            TextColor="{StaticResource ThemeTextColor}"
                            FontFamily="Bold"
                            Style="{DynamicResource SubtitleStyle}"/>
@@ -48,10 +49,10 @@
                     <ViewCell>
                         <StackLayout Padding="15, 20" HorizontalOptions="FillAndExpand">
                             <Label VerticalOptions="FillAndExpand" 
-                    VerticalTextAlignment="Center" 
-                    Text="{Binding Title}" 
-                    FontFamily="Bold"
-                    FontSize="Small"/>
+                                   VerticalTextAlignment="Center" 
+                                   Text="{Binding Title}" 
+                                   FontFamily="Bold"
+                                   FontSize="Small"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
