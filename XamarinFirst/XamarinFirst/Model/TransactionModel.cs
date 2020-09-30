@@ -13,5 +13,11 @@ namespace XamarinFirst.Model
         public string Icon { get; set; }
         public string Color { get; set; }
         public string TransactionType { get; set; }
+
+        public string Title { get; set; }
+        public string MadeByUser { get; set; }
+        public string AccountDebited { get; set; }
+        public string AccountCredited { get; set; }
+        public string Note { get; set; }
     }
 }

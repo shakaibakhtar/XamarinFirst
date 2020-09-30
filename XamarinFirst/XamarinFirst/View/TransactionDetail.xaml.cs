@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinFirst.ViewModel;
 
 namespace XamarinFirst.View
 {
@@ -15,11 +16,13 @@ namespace XamarinFirst.View
         public TransactionDetail()
         {
             InitializeComponent();
+
+            BindingContext = new TransactionDetailPageViewModel(Navigation);
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            DisplayAlert("Notification", "Screenshot Captured", "OK");
-        }
+        //private void ImageButton_Clicked(object sender, EventArgs e)
+        //{
+        //    DisplayAlert("Notification", "Screenshot Captured", "OK");
+        //}
     }
 }
