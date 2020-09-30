@@ -10,7 +10,7 @@
         <StackLayout Padding="0">
             <ListView ItemsSource="{Binding Partners}"
                       HasUnevenRows="True"
-                      ItemSelected="ListView_ItemSelected">
+                      SelectedItem="{Binding SelectedPartner, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -19,7 +19,7 @@
                                     <StackLayout Padding="10, 0, 0, 0" Orientation="Horizontal">
                                         <StackLayout>
                                             <Frame CornerRadius="60" HeightRequest="40" WidthRequest="40" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="0" IsClippedToBounds="True">
-                                                <Image Source="dp.png" HeightRequest="40" WidthRequest="40"></Image>
+                                                <Image Source="{Binding Image}" HeightRequest="40" WidthRequest="40"></Image>
                                             </Frame>
                                         </StackLayout>
                                         <StackLayout Padding="20, 0, 0, 0" 

@@ -17,18 +17,18 @@ namespace XamarinFirst.View
         public PartnersPage()
         {
             InitializeComponent();
-            BindingContext = new PartnersViewModel();
+            BindingContext = new PartnersViewModel(Navigation);
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-            {
-                return; // catch deselection
-            }
+        //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItem == null)
+        //    {
+        //        return; // catch deselection
+        //    }
 
-            ((ListView)sender).SelectedItem = null;
-            Navigation.PushAsync(new UserProfile());
-        }
+        //    ((ListView)sender).SelectedItem = null;
+        //    Navigation.PushAsync(new UserProfile());
+        //}
     }
 }

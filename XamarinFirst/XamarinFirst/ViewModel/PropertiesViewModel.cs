@@ -25,8 +25,12 @@ namespace XamarinFirst.ViewModel
             }
             set
             {
-                _SelectedProperty = value;
-                navigation.PushAsync(new PropertyDetailPage());
+                if (value != null)
+                {
+                    _SelectedProperty = value;
+                    navigation.PushAsync(new PropertyDetailPage());
+                }
+
                 _SelectedProperty = null;
 
                 OnPropertyChanged();
