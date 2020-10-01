@@ -10,7 +10,7 @@
         <StackLayout Padding="0">
             <ListView ItemsSource="{Binding SearchResults}"
                       HasUnevenRows="True"
-                      ItemSelected="ListView_ItemSelected">
+                      SelectedItem="{Binding SelectedProperty, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

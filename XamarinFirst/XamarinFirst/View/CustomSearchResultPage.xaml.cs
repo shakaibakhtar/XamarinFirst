@@ -16,17 +16,17 @@ namespace XamarinFirst.View
         public CustomSearchResultPage()
         {
             InitializeComponent();
-            BindingContext = new CustomSearchResultViewModel();
+            BindingContext = new CustomSearchResultViewModel(Navigation);
         }
 
-        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-            {
-                return; // catch deselection
-            }
-            ((ListView)sender).SelectedItem = null;
-            await Navigation.PushAsync(new PropertyDetailPage());
-        }
+        //private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItem == null)
+        //    {
+        //        return; // catch deselection
+        //    }
+        //    ((ListView)sender).SelectedItem = null;
+        //    await Navigation.PushAsync(new PropertyDetailPage());
+        //}
     }
 }

@@ -2,16 +2,43 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using Xamarin.Forms;
 using XamarinFirst.Model;
+using XamarinFirst.View;
 
 namespace XamarinFirst.ViewModel
 {
-    class CustomSearchResultViewModel
+    public class CustomSearchResultViewModel:BaseViewModel
     {
-        public ObservableCollection<CustomSearchResultModel> SearchResults { get; set; } = new ObservableCollection<CustomSearchResultModel>();
+        INavigation navigation;
+        public ObservableCollection<CustomSearchResultModel> SearchResults { get; set; }
 
-        public CustomSearchResultViewModel()
+        CustomSearchResultModel _SelectedProperty;
+        public CustomSearchResultModel SelectedProperty
         {
+            get
+            {
+                return _SelectedProperty;
+            }
+            set
+            {
+                if(value != null)
+                {
+                    _SelectedProperty = value;
+                    navigation.PushAsync(new PropertyDetailPage());
+                }
+
+                _SelectedProperty = null;
+                OnPropertyChanged();
+            }
+        }
+
+        public CustomSearchResultViewModel(INavigation navigation)
+        {
+            this.navigation = navigation;
+
+            SearchResults = new ObservableCollection<CustomSearchResultModel>();
+
             for (int i = 0; i < 15; i++)
             {
                 CustomSearchResultModel searchResult = new CustomSearchResultModel();
