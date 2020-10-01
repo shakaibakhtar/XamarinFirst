@@ -11,7 +11,7 @@ using XamarinFirst.View;
 
 namespace XamarinFirst.ViewModel
 {
-    public class DashboardViewModel : INotifyPropertyChanged
+    public class DashboardViewModel : BaseViewModel
     {
         #region Properties & Variables
         public LineChart chart { get; set; }
@@ -126,6 +126,10 @@ namespace XamarinFirst.ViewModel
                     {
                         navigation.PushAsync(new SettingsPage());
                     }
+                    else if (_SelectedMenuItem.Id == 6)
+                    {
+                        Application.Current.MainPage = new NavigationPage(new LoginPage());
+                    }
                 }
                 _SelectedMenuItem = null;
 
@@ -159,6 +163,7 @@ namespace XamarinFirst.ViewModel
                     new DashboardMasterMenuItem { Id = 3, Title = "Transactions" },
                     new DashboardMasterMenuItem { Id = 4, Title = "Advance Search" },
                     new DashboardMasterMenuItem { Id = 5, Title = "Settings" },
+                    new DashboardMasterMenuItem { Id = 6, Title = "Logout" },
                 });
 
             dpSrc = "dp.png";
@@ -191,17 +196,6 @@ namespace XamarinFirst.ViewModel
             var hex = $"#{alpha:X2}{red:X2}{green:X2}{blue:X2}";
 
             return hex;
-        }
-        #endregion
-
-        #region INotifyPropertyChanged Implementation
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged == null)
-                return;
-
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
     }

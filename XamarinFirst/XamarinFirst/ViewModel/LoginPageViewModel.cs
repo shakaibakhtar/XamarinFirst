@@ -9,13 +9,13 @@ namespace XamarinFirst.ViewModel
 {
     public class LoginPageViewModel
     {
-        public UserModel User { get; set; }
+        public clsUser User { get; set; }
         INavigation navigation;
 
         public LoginPageViewModel(INavigation navigation)
         {
             this.navigation = navigation;
-            User = new UserModel();
+            User = new clsUser();
         }
 
         #region Commands
