@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinFirst.ViewModel;
 
 namespace XamarinFirst.View
 {
@@ -15,20 +16,22 @@ namespace XamarinFirst.View
         public SettingsPage()
         {
             InitializeComponent();
+
+            BindingContext = new SettingsViewModel(Navigation);
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItemIndex == 0)
-                Navigation.PushAsync(new AccountSettingsPage());
-            else if (e.SelectedItemIndex == 1)
-                DisplayAlert("Notification", "About", "OK");
-            else if (e.SelectedItemIndex == 2)
-                DisplayAlert("Notification", "Business Settings", "OK");
-            else if (e.SelectedItemIndex == 3)
-                DisplayAlert("Notification", "Language Settings", "OK");
+        //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItemIndex == 0)
+        //        Navigation.PushAsync(new AccountSettingsPage());
+        //    else if (e.SelectedItemIndex == 1)
+        //        DisplayAlert("Notification", "About", "OK");
+        //    else if (e.SelectedItemIndex == 2)
+        //        DisplayAlert("Notification", "Business Settings", "OK");
+        //    else if (e.SelectedItemIndex == 3)
+        //        DisplayAlert("Notification", "Language Settings", "OK");
 
-            ((ListView)sender).SelectedItem = null;
-        }
+        //    ((ListView)sender).SelectedItem = null;
+        //}
     }
 }

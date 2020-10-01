@@ -8,8 +8,10 @@ using XamarinFirst.View;
 
 namespace XamarinFirst.ViewModel
 {
-    public class CustomSearchResultViewModel:BaseViewModel
+    public class CustomSearchResultViewModel : BaseViewModel
     {
+
+        #region Properties & Variables
         INavigation navigation;
         public ObservableCollection<CustomSearchResultModel> SearchResults { get; set; }
 
@@ -22,7 +24,7 @@ namespace XamarinFirst.ViewModel
             }
             set
             {
-                if(value != null)
+                if (value != null)
                 {
                     _SelectedProperty = value;
                     navigation.PushAsync(new PropertyDetailPage());
@@ -32,7 +34,9 @@ namespace XamarinFirst.ViewModel
                 OnPropertyChanged();
             }
         }
+        #endregion
 
+        #region Constructors
         public CustomSearchResultViewModel(INavigation navigation)
         {
             this.navigation = navigation;
@@ -50,5 +54,6 @@ namespace XamarinFirst.ViewModel
                 SearchResults.Add(searchResult);
             }
         }
+        #endregion
     }
 }

@@ -8,9 +8,7 @@
              Title="Settings">
     <ContentPage.Content>
         <StackLayout Padding="0">
-            <ListView
-                HasUnevenRows="True"
-                ItemSelected="ListView_ItemSelected">
+            <ListView HasUnevenRows="True" SelectedItem="{Binding SelectedSetting, Mode=TwoWay}">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Account Settings</x:String>
