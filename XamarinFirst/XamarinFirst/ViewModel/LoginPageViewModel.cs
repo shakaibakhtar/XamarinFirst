@@ -59,7 +59,7 @@ namespace XamarinFirst.ViewModel
             {
                 return new Command(() =>
                 {
-                    App.Current.MainPage.DisplayAlert("Notification", "Signup Page To Be Designed!", "ok!");
+                    navigation.PushAsync(new UserSignUpPage());
                 });
             }
         }

@@ -9,25 +9,25 @@ namespace MehdiEnterprise.Models
 {
     public static class Helper
     {
-        public static string ToAbsoluteUrl(this string relativeUrl) //Use absolute URL instead of adding phycal path for CSS, JS and Images 
-        {
-            if (string.IsNullOrEmpty(relativeUrl))
-                return relativeUrl;
+        //public static string ToAbsoluteUrl(this string relativeUrl) //Use absolute URL instead of adding phycal path for CSS, JS and Images 
+        //{
+        //    if (string.IsNullOrEmpty(relativeUrl))
+        //        return relativeUrl;
 
-            if (HttpContext.Current == null)
-                return relativeUrl;
+        //    if (HttpContext.Current == null)
+        //        return relativeUrl;
 
-            if (relativeUrl.StartsWith("/"))
-                relativeUrl = relativeUrl.Insert(0, "~");
-            if (!relativeUrl.StartsWith("~/"))
-                relativeUrl = relativeUrl.Insert(0, "~/");
+        //    if (relativeUrl.StartsWith("/"))
+        //        relativeUrl = relativeUrl.Insert(0, "~");
+        //    if (!relativeUrl.StartsWith("~/"))
+        //        relativeUrl = relativeUrl.Insert(0, "~/");
 
-            var url = HttpContext.Current.Request.Url;
-            var port = url.Port != 80 ? (":" + url.Port) : String.Empty;
+        //    var url = HttpContext.Current.Request.Url;
+        //    var port = url.Port != 80 ? (":" + url.Port) : String.Empty;
 
-            return String.Format("{0}://{1}{2}{3}",
-                url.Scheme, url.Host, port, VirtualPathUtility.ToAbsolute(relativeUrl));
-        }
+        //    return String.Format("{0}://{1}{2}{3}",
+        //        url.Scheme, url.Host, port, VirtualPathUtility.ToAbsolute(relativeUrl));
+        //}
         public static string GeneratePassword(int length) //length of salt
         {
             const string allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789";
