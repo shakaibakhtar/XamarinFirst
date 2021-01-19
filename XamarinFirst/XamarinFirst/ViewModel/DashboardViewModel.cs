@@ -16,7 +16,7 @@ namespace XamarinFirst.ViewModel
         #region Properties & Variables
         public LineChart chart { get; set; }
 
-        static string color = GetHexString((Xamarin.Forms.Color)Application.Current.Resources["ThemeBarChartColor"]);
+        static string color = GetHexString((Color)Application.Current.Resources["ThemeBarChartColor"]);
         IEnumerable<ChartEntry> entries = new[]
         {
             new ChartEntry(250)

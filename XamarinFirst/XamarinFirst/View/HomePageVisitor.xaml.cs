@@ -19,5 +19,11 @@ namespace XamarinFirst.View
 
             BindingContext = new HomePageVisitorViewModel(Navigation);
         }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null) return;
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }

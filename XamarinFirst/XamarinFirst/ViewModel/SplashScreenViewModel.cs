@@ -14,13 +14,16 @@ namespace XamarinFirst.ViewModel
         public SplashScreenViewModel(INavigation navigation)
         {
             this.navigation = navigation;
-            LongRunningOperationAsync();
+            Task.Run(async () => await LongRunningOperationAsync());
         }
 
         public async Task LongRunningOperationAsync()
         {
             await Task.Delay(2000);
-            Application.Current.MainPage = new NavigationPage(new OnBoarding());
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                Application.Current.MainPage = new NavigationPage(new OnBoarding());
+            });
         }
     }
 }

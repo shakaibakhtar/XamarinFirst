@@ -16,23 +16,8 @@ namespace XamarinFirst.Utility
 {
     public class ApiCalls
     {
-        // Mock api for login => https://run.mocky.io/v3/e85dd9b5-5603-4ae8-b4d6-68f3d0555e6b
-
-        #region SecureStorage Keys
-        public static string keyStudentIdNumber = "StudentIdNumber";
-        public static string keyStudentPassword = "StudentPassword";
-        public static string keyTechId = "TechId";
-        public static string keyTechLoginId = "TechLoginId";
-        public static string keyTechSafeCode = "TechSafeCode";
-        #endregion
-
         #region Properties & Variables
-        //private string BaseApiUrl = "https://pantexhealth.favouritebazaar.pk/myapi";
-        //private string BaseApiUrl = "http://192.168.10.14:8080/myapi";
         INavigation navigation;
-        RestClient client;
-        IRestRequest request;
-        IRestResponse restResponse;
 
         bool _IsBusy;
         public bool IsBusy
@@ -62,81 +47,81 @@ namespace XamarinFirst.Utility
         public async System.Threading.Tasks.Task<DashboardModel> Login(string Email, string Password, [System.Runtime.CompilerServices.CallerMemberName] string memberName = "", [System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "", [System.Runtime.CompilerServices.CallerLineNumber] int sourceLineNumber = 0)
         {
             bool res = false;
-            HttpStatusCode responseStatusCode = 0;
-            DashboardModel dashboard = new DashboardModel();
+            //HttpStatusCode responseStatusCode = 0;
+            //DashboardModel dashboard = new DashboardModel();
 
-            if (await IsInternetConnected())
-            {
-                try
-                {
-                    IsBusy = true;
+            //if (await IsInternetConnected())
+            //{
+            //    try
+            //    {
+            //        IsBusy = true;
 
-                    request = new RestRequest("/Login", Method.GET);
-                    request.AddParameter("Email", Email);
-                    request.AddParameter("Password", Password);
-                    request.Timeout = 10000;
+            //        request = new RestRequest("/Login", Method.GET);
+            //        request.AddParameter("Email", Email);
+            //        request.AddParameter("Password", Password);
+            //        request.Timeout = 10000;
 
-                    restResponse = await client.ExecuteAsync(request);
+            //        restResponse = await client.ExecuteAsync(request);
 
-                    responseStatusCode = restResponse.StatusCode;
+            //        responseStatusCode = restResponse.StatusCode;
 
-                    if (restResponse.StatusCode == HttpStatusCode.OK)
-                    {
-                        var jObject = JObject.Parse(restResponse.Content);
-                        bool status = (bool)jObject.GetValue("Status");
+            //        if (restResponse.StatusCode == HttpStatusCode.OK)
+            //        {
+            //            var jObject = JObject.Parse(restResponse.Content);
+            //            bool status = (bool)jObject.GetValue("Status");
 
-                        if (!status)
-                        {
-                            IsBusy = false;
-                            //await navigation.PushPopupAsync(new AlertPopup("E", jObject.GetValue("Message").ToString()));
-                        }
-                        else
-                        {
-                            dashboard = JsonConvert.DeserializeObject<DashboardModel>(restResponse.Content);
+            //            if (!status)
+            //            {
+            //                IsBusy = false;
+            //                //await navigation.PushPopupAsync(new AlertPopup("E", jObject.GetValue("Message").ToString()));
+            //            }
+            //            else
+            //            {
+            //                dashboard = JsonConvert.DeserializeObject<DashboardModel>(restResponse.Content);
 
-                            //App.Current.Properties["StudentIdNumber"] = student.StudentIdNumber;
-                            //App.Current.Properties["Password"] = student.Password;
-                            //App.Current.Properties["Usertype"] = "Student";
-                            //await App.Current.SavePropertiesAsync();
+            //                //App.Current.Properties["StudentIdNumber"] = student.StudentIdNumber;
+            //                //App.Current.Properties["Password"] = student.Password;
+            //                //App.Current.Properties["Usertype"] = "Student";
+            //                //await App.Current.SavePropertiesAsync();
 
-                            //try
-                            //{
-                            //    //await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value-from-api");
-                            //    await SecureStorage.SetAsync(keyStudentIdNumber, student.StudentIdNumber);
-                            //    await SecureStorage.SetAsync(keyStudentPassword, student.Password);
-                            //}
-                            //catch (Exception ex)
-                            //{
-                            //    App.Current.Properties[keyStudentIdNumber] = student.StudentIdNumber;
-                            //    App.Current.Properties[keyStudentPassword] = student.Password;
-                            //    await App.Current.SavePropertiesAsync();
-                            //    //await SendEmail(responseStatusCode, memberName, sourceFilePath, sourceLineNumber, ex.Message, "Exception From Pantex Health");
-                            //    //await navigation.PushPopupAsync(new AlertPopup("E", "Problem with secure storage."));
-                            //    //Application.Current.MainPage = new StudentLoginPage();
-                            //}
-                            IsBusy = false;
-                        }
+            //                //try
+            //                //{
+            //                //    //await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value-from-api");
+            //                //    await SecureStorage.SetAsync(keyStudentIdNumber, student.StudentIdNumber);
+            //                //    await SecureStorage.SetAsync(keyStudentPassword, student.Password);
+            //                //}
+            //                //catch (Exception ex)
+            //                //{
+            //                //    App.Current.Properties[keyStudentIdNumber] = student.StudentIdNumber;
+            //                //    App.Current.Properties[keyStudentPassword] = student.Password;
+            //                //    await App.Current.SavePropertiesAsync();
+            //                //    //await SendEmail(responseStatusCode, memberName, sourceFilePath, sourceLineNumber, ex.Message, "Exception From Pantex Health");
+            //                //    //await navigation.PushPopupAsync(new AlertPopup("E", "Problem with secure storage."));
+            //                //    //Application.Current.MainPage = new StudentLoginPage();
+            //                //}
+            //                IsBusy = false;
+            //            }
 
-                        res = status;
-                    }
-                    else
-                    {
-                        IsBusy = false;
-                        await SendEmail(responseStatusCode, memberName, sourceFilePath, sourceLineNumber, "", "Exception From Mehdi App");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    IsBusy = false;
-                    res = false;
-                    await SendEmail(responseStatusCode, memberName, sourceFilePath, sourceLineNumber, ex.StackTrace, "Exception From Mehdi App");
-                }
-            }
+            //            res = status;
+            //        }
+            //        else
+            //        {
+            //            IsBusy = false;
+            //            await SendEmail(responseStatusCode, memberName, sourceFilePath, sourceLineNumber, "", "Exception From Mehdi App");
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        IsBusy = false;
+            //        res = false;
+            //        await SendEmail(responseStatusCode, memberName, sourceFilePath, sourceLineNumber, ex.StackTrace, "Exception From Mehdi App");
+            //    }
+            //}
 
             IsBusy = false;
-            if (res)
-                return dashboard;
-            else
+            //if (res)
+            //    return dashboard;
+            //else
                 return null;
 
         }
@@ -146,7 +131,7 @@ namespace XamarinFirst.Utility
 
 
         #region Check Permissions
-        private async System.Threading.Tasks.Task<bool> IsInternetConnected()
+        private bool IsInternetConnected()
         {
             var profiles = Connectivity.ConnectionProfiles;
             if (profiles.Contains(ConnectionProfile.WiFi) || profiles.Contains(ConnectionProfile.Cellular))
@@ -203,7 +188,7 @@ namespace XamarinFirst.Utility
             //        }
             //}
 
-            if (await IsInternetConnected())
+            if (IsInternetConnected())
             {
                 try
                 {
